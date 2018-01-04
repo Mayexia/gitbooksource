@@ -1,0 +1,659 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>xgboost参数和原理 · Maye的个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xiachi">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../gitbook_files/introduction.html" />
+    
+    
+    <link rel="prev" href="git学习代码.html" />
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://starmaye.github.io" target="_blank" class="custom-link">Maye的个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据分析</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../数据分析/matplotlib基本绘图示例.html">
+            
+                <a href="../数据分析/matplotlib基本绘图示例.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    matplotlib基本绘图示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工程工具</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="git连接多个账号.html">
+            
+                <a href="git连接多个账号.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    git链接多个账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="git学习代码.html">
+            
+                <a href="git学习代码.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    git学习代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="xgboost参数和原理.html">
+            
+                <a href="xgboost参数和原理.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    xgboost参数和原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">gitbook的基本使用</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../gitbook_files/introduction.html">
+            
+                <a href="../gitbook_files/introduction.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../gitbook_files/installation.html">
+            
+                <a href="../gitbook_files/installation.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../gitbook_files/commands.html">
+            
+                <a href="../gitbook_files/commands.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../gitbook_files/structure.html">
+            
+                <a href="../gitbook_files/structure.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../gitbook_files/settings.html">
+            
+                <a href="../gitbook_files/settings.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../gitbook_files/plugins.html">
+            
+                <a href="../gitbook_files/plugins.html">
+            
+                    
+                        <b>4.6.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../gitbook_files/themes.html">
+            
+                <a href="../gitbook_files/themes.html">
+            
+                    
+                        <b>4.7.</b>
+                    
+                    主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../gitbook_files/bookjson.md">
+            
+                <span>
+            
+                    
+                        <b>4.8.</b>
+                    
+                    bookjson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >xgboost参数和原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#1&#x3001;xgboost&#x53C2;&#x6570;">1&#x3001;XGBoost&#x53C2;&#x6570;</a></li><ul><li><a href="#11booster&#x53C2;&#x6570;&#xFF1A;">1.1Booster&#x53C2;&#x6570;&#xFF1A;</a></li><li><a href="#12&#x901A;&#x7528;&#x53C2;&#x6570;">1.2&#x901A;&#x7528;&#x53C2;&#x6570;</a></li><li><a href="#13&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x53C2;&#x6570;&#xFF1A;">1.3&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x53C2;&#x6570;&#xFF1A;</a></li></ul><li><a href="#2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;">2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;</a></li></ul></div><a href="#1&#x3001;xgboost&#x53C2;&#x6570;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="1&#x3001;xgboost&#x53C2;&#x6570;"><a name="1&#x3001;xgboost&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#1&#x3001;xgboost&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;XGBoost&#x53C2;&#x6570;</h1>
+<p>&#x5728;&#x8FD0;&#x884C;XGBoost&#x7A0B;&#x5E8F;&#x4E4B;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x4E09;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#xFF1A;&#x901A;&#x7528;&#x7C7B;&#x578B;&#x53C2;&#x6570;&#xFF08;general parameters&#xFF09;&#x3001;booster&#x53C2;&#x6570;&#x548C;&#x5B66;&#x4E60;&#x4EFB;&#x52A1;&#x53C2;&#x6570;&#xFF08;task parameters&#xFF09;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x7C7B;&#x578B;&#x53C2;&#x6570;general parameters &#x2013;&#x53C2;&#x6570;&#x51B3;&#x5B9A;&#x5728;&#x63D0;&#x5347;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7528;&#x54EA;&#x79CD;booster&#xFF0C;&#x5E38;&#x89C1;&#x7684;booster&#x6709;&#x6811;&#x6A21;&#x578B;&#x548C;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x3002;</p>
+<p>Booster&#x53C2;&#x6570;-&#x8BE5;&#x53C2;&#x6570;&#x7684;&#x8BBE;&#x7F6E;&#x4F9D;&#x8D56;&#x4E8E;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x54EA;&#x4E00;&#x79CD;booster&#x6A21;&#x578B;&#x3002;
+&#x5B66;&#x4E60;&#x4EFB;&#x52A1;&#x53C2;&#x6570;task parameters-&#x53C2;&#x6570;&#x7684;&#x8BBE;&#x7F6E;&#x51B3;&#x5B9A;&#x7740;&#x54EA;&#x4E00;&#x79CD;&#x5B66;&#x4E60;&#x573A;&#x666F;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x56DE;&#x5F52;&#x4EFB;&#x52A1;&#x4F1A;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x6765;&#x63A7;&#x5236;&#x7740;&#x6392;&#x5E8F;&#x4EFB;&#x52A1;&#x3002;
+&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;-&#x4E00;&#x822C;&#x548C;xgboost&#x7684;CL&#x7248;&#x672C;&#x76F8;&#x5173;&#x3002;</p>
+<h2 id="11booster&#x53C2;&#x6570;&#xFF1A;"><a name="11booster&#x53C2;&#x6570;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#11booster&#x53C2;&#x6570;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1Booster&#x53C2;&#x6570;&#xFF1A;</h2>
+<ul>
+<li>eta[&#x9ED8;&#x8BA4;&#x662F;0.3] &#x548C;GBM&#x4E2D;&#x7684;learning rate&#x53C2;&#x6570;&#x7C7B;&#x4F3C;&#x3002;&#x901A;&#x8FC7;&#x51CF;&#x5C11;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x6A21;&#x578B;&#x7684;&#x9C81;&#x68D2;&#x6027;&#x3002;&#x5178;&#x578B;&#x503C;0.01-0.2</li>
+<li>min_child_weight[&#x9ED8;&#x8BA4;&#x662F;1] &#x51B3;&#x5B9A;&#x6700;&#x5C0F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x6837;&#x672C;&#x6743;&#x91CD;&#x548C;&#x3002;&#x5F53;&#x5B83;&#x7684;&#x503C;&#x8F83;&#x5927;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x6A21;&#x578B;&#x5B66;&#x4E60;&#x5230;&#x5C40;&#x90E8;&#x7684;&#x7279;&#x6B8A;&#x6837;&#x672C;&#x3002;&#x4F46;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x8FC7;&#x9AD8;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6B20;&#x62DF;&#x5408;&#x3002;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x9700;&#x8981;&#x7528;cv&#x6765;&#x8C03;&#x6574;</li>
+<li>max_depth [&#x9ED8;&#x8BA4;&#x662F;6] &#x6811;&#x7684;&#x6700;&#x5927;&#x6DF1;&#x5EA6;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x4E5F;&#x662F;&#x7528;&#x6765;&#x907F;&#x514D;&#x8FC7;&#x62DF;&#x5408;&#x7684;3-10</li>
+<li>max_leaf_nodes &#x6811;&#x4E0A;&#x6700;&#x5927;&#x7684;&#x8282;&#x70B9;&#x6216;&#x53F6;&#x5B50;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4EE3;&#x66FF;max_depth&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5E94;&#x4E3A;&#x5982;&#x679C;&#x751F;&#x6210;&#x7684;&#x662F;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x4E00;&#x4E2A;&#x6DF1;&#x5EA6;&#x4E3A;n&#x7684;&#x6811;&#x6700;&#x591A;&#x751F;&#x6210;2n&#x4E2A;&#x53F6;&#x5B50;,&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;max_depth&#x4F1A;&#x88AB;&#x5FFD;&#x7565;</li>
+<li>gamma[&#x9ED8;&#x8BA4;&#x662F;0] &#x5728;&#x8282;&#x70B9;&#x5206;&#x88C2;&#x65F6;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5206;&#x88C2;&#x540E;&#x635F;&#x5931;&#x51FD;&#x6570;&#x7684;&#x503C;&#x4E0B;&#x964D;&#x4E86;&#xFF0C;&#x624D;&#x4F1A;&#x5206;&#x88C2;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x3002;Gamma&#x6307;&#x5B9A;&#x4E86;&#x8282;&#x70B9;&#x5206;&#x88C2;&#x6240;&#x9700;&#x7684;&#x6700;&#x5C0F;&#x635F;&#x5931;&#x51FD;&#x6570;&#x4E0B;&#x964D;&#x503C;&#x3002;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x7B97;&#x6CD5;&#x8D8A;&#x4FDD;&#x5B88;&#x3002;</li>
+<li>max_delta_step[&#x9ED8;&#x8BA4;&#x662F;0] &#x8FD9;&#x53C2;&#x6570;&#x9650;&#x5236;&#x6BCF;&#x9897;&#x6811;&#x6743;&#x91CD;&#x6539;&#x53D8;&#x7684;&#x6700;&#x5927;&#x6B65;&#x957F;&#x3002;&#x5982;&#x679C;&#x662F;0&#x610F;&#x5473;&#x7740;&#x6CA1;&#x6709;&#x7EA6;&#x675F;&#x3002;&#x5982;&#x679C;&#x662F;&#x6B63;&#x503C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x4F1A;&#x66F4;&#x4FDD;&#x5B88;&#xFF0C;&#x901A;&#x5E38;&#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x3002;</li>
+<li>subsample[&#x9ED8;&#x8BA4;&#x662F;1] &#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x63A7;&#x5236;&#x5BF9;&#x4E8E;&#x6BCF;&#x68F5;&#x6811;&#xFF0C;&#x968F;&#x673A;&#x91C7;&#x6837;&#x7684;&#x6BD4;&#x4F8B;&#x3002;&#x51CF;&#x5C0F;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x503C;&#x7B97;&#x6CD5;&#x4F1A;&#x66F4;&#x52A0;&#x4FDD;&#x5B88;&#xFF0C;&#x907F;&#x514D;&#x8FC7;&#x62DF;&#x5408;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x503C;&#x8BBE;&#x7F6E;&#x7684;&#x8FC7;&#x5C0F;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x6B20;&#x62DF;&#x5408;&#x3002;&#x5178;&#x578B;&#x503C;&#xFF1A;0.5-1</li>
+<li>colsample_bytree[&#x9ED8;&#x8BA4;&#x662F;1] &#x7528;&#x6765;&#x63A7;&#x5236;&#x6BCF;&#x9897;&#x6811;&#x968F;&#x673A;&#x91C7;&#x6837;&#x7684;&#x5217;&#x6570;&#x7684;&#x5360;&#x6BD4;&#x6BCF;&#x4E00;&#x5217;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x5F81;0.5-1</li>
+<li>colsample_bylevel[&#x9ED8;&#x8BA4;&#x662F;1] &#x7528;&#x6765;&#x63A7;&#x5236;&#x7684;&#x6BCF;&#x4E00;&#x7EA7;&#x7684;&#x6BCF;&#x4E00;&#x6B21;&#x5206;&#x88C2;&#xFF0C;&#x5BF9;&#x5217;&#x6570;&#x7684;&#x91C7;&#x6837;&#x7684;&#x5360;&#x6BD4;&#x3002;</li>
+<li>lambda[&#x9ED8;&#x8BA4;&#x662F;1] &#x6743;&#x91CD;&#x7684;L2&#x6B63;&#x5219;&#x5316;&#x9879;</li>
+<li>alpha[&#x9ED8;&#x8BA4;&#x662F;1] &#x6743;&#x91CD;&#x7684;L1&#x6B63;&#x5219;&#x5316;&#x9879;</li>
+<li>scale_pos_weight[&#x9ED8;&#x8BA4;&#x662F;1] &#x5404;&#x7C7B;&#x6837;&#x672C;&#x5341;&#x5206;&#x4E0D;&#x5E73;&#x8861;&#x65F6;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E00;&#x4E2A;&#x6B63;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7B97;&#x6CD5;&#x66F4;&#x5FEB;&#x6536;&#x655B;&#x3002;</li>
+</ul>
+<h2 id="12&#x901A;&#x7528;&#x53C2;&#x6570;"><a name="12&#x901A;&#x7528;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#12&#x901A;&#x7528;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2&#x901A;&#x7528;&#x53C2;&#x6570;</h2>
+<ul>
+<li>booster[&#x9ED8;&#x8BA4;&#x662F;gbtree]
+&#x9009;&#x62E9;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x9009;&#x62E9;&#xFF1A;gbtree&#x57FA;&#x4E8E;&#x6811;&#x7684;&#x6A21;&#x578B;&#x3001;gbliner&#x7EBF;&#x6027;&#x6A21;&#x578B;</li>
+<li>silent[&#x9ED8;&#x8BA4;&#x662F;0]
+&#x5F53;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x4E3A;1&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9759;&#x9ED8;&#x6A21;&#x5F0F;&#x5F00;&#x542F;&#xFF0C;&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;&#x4EFB;&#x4F55;&#x4FE1;&#x606F;&#x3002;&#x4E00;&#x822C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4FDD;&#x6301;&#x9ED8;&#x8BA4;&#x7684;0&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5E2E;&#x6211;&#x4EEC;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x6A21;&#x578B;&#x3002;</li>
+<li>nthread[&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x6700;&#x5927;&#x53EF;&#x80FD;&#x7684;&#x7EBF;&#x7A0B;&#x6570;]</li>
+</ul>
+<p>&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x591A;&#x7EBF;&#x7A0B;&#x63A7;&#x5236;&#xFF0C;&#x5E94;&#x5F53;&#x8F93;&#x5165;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x4F7F;&#x7528;cpu&#x5168;&#x90E8;&#x7684;&#x6838;&#xFF0C;&#x5C31;&#x4E0D;&#x8981;&#x8F93;&#x5165;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B97;&#x6CD5;&#x4F1A;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x3002;</p>
+<h2 id="13&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x53C2;&#x6570;&#xFF1A;"><a name="13&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x53C2;&#x6570;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#13&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x53C2;&#x6570;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3&#x5B66;&#x4E60;&#x76EE;&#x6807;&#x53C2;&#x6570;&#xFF1A;</h2>
+<ul>
+<li>objective[&#x9ED8;&#x8BA4;&#x662F;reg&#xFF1A;linear]
+&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#x9700;&#x8981;&#x88AB;&#x6700;&#x5C0F;&#x5316;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684;&#x503C;&#x6709;&#xFF1A;binary&#xFF1A;logistic&#x4E8C;&#x5206;&#x7C7B;&#x7684;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#xFF0C;&#x8FD4;&#x56DE;&#x9884;&#x6D4B;&#x7684;&#x6982;&#x7387;&#x975E;&#x7C7B;&#x522B;&#x3002;multi:softmax&#x4F7F;&#x7528;softmax&#x7684;&#x591A;&#x5206;&#x7C7B;&#x5668;&#xFF0C;&#x8FD4;&#x56DE;&#x9884;&#x6D4B;&#x7684;&#x7C7B;&#x522B;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x8FD8;&#x8981;&#x591A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;num_class&#x7C7B;&#x522B;&#x6570;&#x76EE;&#x3002;</li>
+<li>eval_metric[&#x9ED8;&#x8BA4;&#x503C;&#x53D6;&#x51B3;&#x4E8E;objective&#x53C2;&#x6570;&#x7684;&#x53D6;&#x4E4B;]
+&#x5BF9;&#x4E8E;&#x6709;&#x6548;&#x6570;&#x636E;&#x7684;&#x5EA6;&#x91CF;&#x65B9;&#x6CD5;&#x3002;&#x5BF9;&#x4E8E;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;rmse&#xFF0C;&#x5BF9;&#x4E8E;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;error&#x3002;&#x5178;&#x578B;&#x503C;&#x6709;&#xFF1A;rmse&#x5747;&#x65B9;&#x6839;&#x8BEF;&#x5DEE;&#xFF1B;mae&#x5E73;&#x5747;&#x7EDD;&#x5BF9;&#x8BEF;&#x5DEE;&#xFF1B;logloss&#x8D1F;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#x503C;&#xFF1B;error&#x4E8C;&#x5206;&#x7C7B;&#x9519;&#x8BEF;&#x7387;&#xFF1B;merror&#x591A;&#x5206;&#x7C7B;&#x9519;&#x8BEF;&#x7387;&#xFF1B;mlogloss&#x591A;&#x5206;&#x7C7B;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF1B;auc&#x66F2;&#x7EBF;&#x4E0B;&#x9762;&#x79EF;&#x3002;</li>
+<li>seed[&#x9ED8;&#x8BA4;&#x662F;0]</li>
+</ul>
+<p>&#x968F;&#x673A;&#x6570;&#x7684;&#x79CD;&#x5B50;&#xFF0C;&#x8BBE;&#x7F6E;&#x5B83;&#x53EF;&#x4EE5;&#x590D;&#x73B0;&#x968F;&#x673A;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8C03;&#x6574;&#x53C2;&#x6570;&#x3002;</p>
+<h1 id="2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;"><a name="2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;</h1>
+<ul>
+<li><p>&#x8BAD;&#x7EC3;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-java">def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String]): XGBoostModel ={
+  val sc = spark.sparkContext
+  val model_name = params_map(&quot;model_name&quot;).toString
+  val tree_deep = params_map(&quot;tree_deep&quot;).toString.toInt
+  val tree_num = params_map(&quot;tree_num&quot;).toString.toInt
+  val lr = params_map(&quot;lr&quot;).toString.toDouble
+  val scale_pos_weight = params_map(&quot;scale_pos_weight&quot;).toString.toInt
+  val lambda_value = params_map(&quot;lambda_value&quot;).toString.toDouble
+  val colsample_bytree = params_map(&quot;colsample_bytree&quot;).toString.toDouble
+  val n_workers = params_map(&quot;n_workers&quot;).toString.toInt
+  val seed_max = params_map(&quot;seed&quot;).toString.toInt
+  val seed = scala.util.Random.nextInt(seed_max)
+  val gamma = params_map.get(&quot;gamma&quot;).getOrElse(&quot;0.0&quot;).toString.toFloat
+  val objective = &quot;binary:logistic&quot;
+
+  val paramMap = List(
+    &quot;eta&quot; -&gt; lr,
+    &quot;max_depth&quot; -&gt; tree_deep,
+    &quot;lambda&quot; -&gt; lambda_value,
+    &quot;objective&quot; -&gt; objective,
+    &quot;scale_pos_weight&quot; -&gt; scale_pos_weight,
+    &quot;colsample_bytree&quot; -&gt; colsample_bytree,
+    &quot;subsample&quot;-&gt;0.75,
+    &quot;seed&quot; -&gt; seed).toMap
+  var xgboostModel = XGBoost.trainWithDataFrame(featuresDF, paramMap, tree_num, nWorkers = n_workers, useExternalMemory = true)
+  val model_name_hadoop = model_name + &quot;_hadoop&quot;
+  xgboostModel.saveModelAsHadoopFile(model_name_hadoop)(sc)
+
+  return xgboostModel
+}
+</code></pre>
+</li>
+<li><p>&#x9884;&#x6D4B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-java">def predict(spark:SparkSession,featuresDF:DataFrame,xgboostModel:XGBoostModel): Unit ={
+  import spark.implicits._
+  val sc = spark.sparkContext
+  val predict_test = xgboostModel.transform(featuresDF)
+
+  val prob_label_df = predict_test.map{x=&gt;
+    val label = x.getAs(&quot;label&quot;).toString.toDouble
+    val probabilities = x.getAs[DenseVector](&quot;probabilities&quot;).toArray(1)
+    (probabilities,label)
+  }
+
+  //auc&#x8BA1;&#x7B97;
+  val dataset_metric = new BinaryClassificationMetrics(prob_label_df.rdd)
+  val dataset_auc = dataset_metric.areaUnderROC()
+  println(&quot;dataset auc:&quot; + dataset_auc)
+
+  //ks&#x8BA1;&#x7B97;
+  val ks_result = computer(prob_label_df,20,sc)
+  val ksMax = ks_result._1
+  val ksInfosDF = ks_result._2.toList.toDF(&quot;level&quot;, &quot;good&quot;, &quot;bad&quot;, &quot;numGood&quot;, &quot;numBad&quot;,
+    &quot;pctGood&quot;, &quot;pctBad&quot;, &quot;ks&quot;, &quot;pBad&quot;, &quot;scoreMin&quot;, &quot;scoreMean&quot;, &quot;scoreMax&quot;, &quot;len&quot;, &quot;pBad2Total&quot;)
+  ksInfosDF.show()
+  println(&quot;&#x6700;&#x5927;ks:&quot;,ksMax)
+}
+</code></pre>
+</li>
+</ul>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="git学习代码.html" class="navigation navigation-prev " aria-label="Previous page: git学习代码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../gitbook_files/introduction.html" class="navigation navigation-next " aria-label="Next page: 前言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"xgboost参数和原理","level":"3.3","depth":1,"next":{"title":"前言","level":"4.1","depth":1,"path":"gitbook_files/introduction.md","ref":"gitbook_files/introduction.md","articles":[]},"previous":{"title":"git学习代码","level":"3.2","depth":1,"path":"工程工具/git学习代码.md","ref":"工程工具/git学习代码.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"工程工具/xgboost参数和原理.md","mtime":"2018-01-04T03:08:27.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-04T03:01:20.272Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

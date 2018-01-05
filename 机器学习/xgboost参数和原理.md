@@ -39,6 +39,15 @@ Booster参数-该参数的设置依赖于我们选择哪一种booster模型。
 # 2、spark的相关代码
 - 训练代码
 ```
+import ml.dmlc.xgboost4j.scala.spark.XGBoost
+import ml.dmlc.xgboost4j.scala.spark.XGBoostModel
+import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
+import org.apache.spark.ml.linalg.{DenseVector, Vector, Vectors}
+import ml.dmlc.xgboost4j.scala.spark.XGBoostClassificationModel
+import ml.dmlc.xgboost4j.scala.{Booster, XGBoost => SXGBoost}
+import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
+```
+```
 def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String]): XGBoostModel ={
     val sc = spark.sparkContext
     val model_name = params_map("model_name").toString

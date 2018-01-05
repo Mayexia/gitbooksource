@@ -107,3 +107,34 @@ def predict(spark:SparkSession,featuresDF:DataFrame,xgboostModel:XGBoostModel): 
     println("最大ks:",ksMax)
   }
 ```
+
+- 模型加载
+
+```
+/**
+   * 从hadoop模型文件中加载模型,返回模型对象
+   * @param spark
+   * @param model_name
+   * @return
+   */
+ def loadModelWithHadoopFile(spark:SparkSession,model_name:String): XGBoostModel ={
+   val model_name_hadoop = model_name + "_hadoop"
+   val sc = spark.sparkContext
+   val xgboostModel = XGBoost.loadModelFromHadoopFile(model_name_hadoop)(sc)
+   return  xgboostModel
+ }
+
+
+ /**
+   * 从python版本训练的模型文件加载模型对象
+   * @param spark
+   * @param model_name
+   * @return
+   */
+ def loadModel(spark:SparkSession,model_name:String): XGBoostClassificationModel ={
+   val xgboostModel = new XGBoostClassificationModel(SXGBoost.loadModel(model_name))
+   return xgboostModel
+
+ }
+
+```

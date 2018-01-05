@@ -8,7 +8,11 @@
 ## 工程工具
 * [git链接多个账号](工程工具/git连接多个账号.md)
 * [git学习代码](工程工具/git学习代码.md)
-* [xgboost参数和原理](工程工具/xgboost参数和原理.md)
+
+## 机器学习
+* [xgboost参数和原理](机器学习/xgboost参数和原理.md)
+
+## 自然语言处理
 
 ## gitbook的基本使用
 * [前言](gitbook_files/introduction.md)

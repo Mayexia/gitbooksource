@@ -4,6 +4,7 @@
 一般类型参数general parameters –参数决定在提升的过程中用哪种booster，常见的booster有树模型和线性模型。
 
 Booster参数-该参数的设置依赖于我们选择哪一种booster模型。
+
 学习任务参数task parameters-参数的设置决定着哪一种学习场景，例如，回归任务会使用不同的参数来控制着排序任务。
 命令行参数-一般和xgboost的CL版本相关。
 ## 1.1Booster参数：
@@ -25,23 +26,19 @@ Booster参数-该参数的设置依赖于我们选择哪一种booster模型。
 选择每次迭代的模型，有两种选择：gbtree基于树的模型、gbliner线性模型
 - silent[默认是0]
 当这个参数值为1的时候，静默模式开启，不会输出任何信息。一般这个参数保持默认的0，这样可以帮我们更好的理解模型。
-- nthread[默认值为最大可能的线程数]
-
-这个参数用来进行多线程控制，应当输入系统的核数，如果你希望使用cpu全部的核，就不要输入这个参数，算法会自动检测。
+- nthread[默认值为最大可能的线程数]这个参数用来进行多线程控制，应当输入系统的核数，如果你希望使用cpu全部的核，就不要输入这个参数，算法会自动检测。
 
 ## 1.3学习目标参数：
 - objective[默认是reg：linear]
 这个参数定义需要被最小化的损失函数。最常用的值有：binary：logistic二分类的逻辑回归，返回预测的概率非类别。multi:softmax使用softmax的多分类器，返回预测的类别。在这种情况下，你还要多设置一个参数：num_class类别数目。
 - eval_metric[默认值取决于objective参数的取之]
 对于有效数据的度量方法。对于回归问题，默认值是rmse，对于分类问题，默认是error。典型值有：rmse均方根误差；mae平均绝对误差；logloss负对数似然函数值；error二分类错误率；merror多分类错误率；mlogloss多分类损失函数；auc曲线下面积。
-- seed[默认是0]
-
-随机数的种子，设置它可以复现随机数据的结果，也可以用于调整参数。
+- seed[默认是0]随机数的种子，设置它可以复现随机数据的结果，也可以用于调整参数。
 
 
 # 2、spark的相关代码
 - 训练代码
-```java
+```
 def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String]): XGBoostModel ={
     val sc = spark.sparkContext
     val model_name = params_map("model_name").toString
@@ -75,7 +72,7 @@ def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String])
 ```
 
 - 预测代码
-```java
+```
 def predict(spark:SparkSession,featuresDF:DataFrame,xgboostModel:XGBoostModel): Unit ={
     import spark.implicits._
     val sc = spark.sparkContext

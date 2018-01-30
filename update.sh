@@ -12,7 +12,7 @@ gitbook build
 echo '更新gitpages内容'
 rm -rf ../${path_name}/*
 cp -rf _book/* ../${path}/.
-cd ../${path_name}
+cd ../${path_name}/
 git add .
 git commit -m "${comment}"
 git push -u origin master

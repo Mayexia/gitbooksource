@@ -19,6 +19,7 @@
 
 ## 代码示例
 * [matplotlib基本绘图示例](代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.md)
+* [sklearn聚类demo](代码Demo/sklearn聚类/sklearn聚类.md)
 
 ## gitbook的基本使用
 * [前言](gitbook_files/introduction.md)

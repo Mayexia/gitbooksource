@@ -1,10 +1,10 @@
 # 1.  安装 jupyter_contrib_nbextensions
-```
+```bash
 pip install jupyter_contrib_nbextensions
 ```
 
 # 2. 配置 nbextension
-```
+```bash
 jupyter contrib nbextension install --user
 ```
 

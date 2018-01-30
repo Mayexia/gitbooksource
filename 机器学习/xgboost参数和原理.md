@@ -38,7 +38,7 @@ Booster参数-该参数的设置依赖于我们选择哪一种booster模型。
 
 # 2、spark的相关代码
 - 训练代码
-```
+```scala
 import ml.dmlc.xgboost4j.scala.spark.XGBoost
 import ml.dmlc.xgboost4j.scala.spark.XGBoostModel
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
@@ -47,7 +47,7 @@ import ml.dmlc.xgboost4j.scala.spark.XGBoostClassificationModel
 import ml.dmlc.xgboost4j.scala.{Booster, XGBoost => SXGBoost}
 import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
 ```
-```
+```scala
 def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String]): XGBoostModel ={
     val sc = spark.sparkContext
     val model_name = params_map("model_name").toString
@@ -81,7 +81,7 @@ def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String])
 ```
 
 - 预测代码
-```
+```scala
 def predict(spark:SparkSession,featuresDF:DataFrame,xgboostModel:XGBoostModel): Unit ={
     import spark.implicits._
     val sc = spark.sparkContext
@@ -110,7 +110,7 @@ def predict(spark:SparkSession,featuresDF:DataFrame,xgboostModel:XGBoostModel): 
 
 - 模型加载
 
-```
+```scala
 /**
    * 从hadoop模型文件中加载模型,返回模型对象
    * @param spark

@@ -18,6 +18,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
@@ -545,12 +549,12 @@
 <h2 id="disqus"><a name="disqus" class="anchor-navigation-ex-anchor" href="#disqus"><i class="fa fa-link" aria-hidden="true"></i></a>Disqus</h2>
 <p>&#x6DFB;&#x52A0;disqus&#x8BC4;&#x8BBA;</p>
 <p><a href="https://plugins.gitbook.com/plugin/disqus" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;disqus&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;disqus&quot;</span>
 ],
-&quot;pluginsConfig&quot;: {
-    &quot;disqus&quot;: {
-        &quot;shortName&quot;: &quot;gitbookuse&quot;
+<span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;disqus&quot;</span>: {
+        <span class="hljs-string">&quot;shortName&quot;</span>: <span class="hljs-string">&quot;gitbookuse&quot;</span>
     }
 }
 </code></pre>
@@ -558,39 +562,39 @@
 <p>&#x652F;&#x6301;&#x4E2D;&#x6587;&#x641C;&#x7D22;, &#x9700;&#x8981;&#x5C06;&#x9ED8;&#x8BA4;&#x7684; <code>search</code> &#x548C; <code>lunr</code> &#x63D2;&#x4EF6;&#x53BB;&#x6389;&#x3002;  </p>
 <p><a href="https://plugins.gitbook.com/plugin/search-plus" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [&quot;-lunr&quot;, &quot;-search&quot;, &quot;search-plus&quot;]
+    <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;-lunr&quot;</span>, <span class="hljs-string">&quot;-search&quot;</span>, <span class="hljs-string">&quot;search-plus&quot;</span>]
 }
 </code></pre>
 <h2 id="prism"><a name="prism" class="anchor-navigation-ex-anchor" href="#prism"><i class="fa fa-link" aria-hidden="true"></i></a>Prism</h2>
 <p>&#x4F7F;&#x7528; <code>Prism.js</code> &#x4E3A;&#x8BED;&#x6CD5;&#x6DFB;&#x52A0;&#x9AD8;&#x4EAE;&#x663E;&#x793A;&#xFF0C;&#x9700;&#x8981;&#x5C06; <code>highlight</code> &#x63D2;&#x4EF6;&#x53BB;&#x6389;&#x3002;&#x8BE5;&#x63D2;&#x4EF6;&#x81EA;&#x5E26;&#x7684;&#x4E3B;&#x9898;&#x6837;&#x5F0F;&#x8F83;&#x5C11;&#xFF0C;&#x53EF;&#x4EE5;&#x518D;&#x5B89;&#x88C5; <code>prism-themes</code> &#x63D2;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x591A;&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x79CD;&#x6837;&#x5F0F;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x6837;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003; <a href="https://github.com/PrismJS/prism-themes" target="_blank">&#x8FD9;&#x91CC;</a>&#xFF0C;&#x5728;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#x65F6;&#x8981;&#x6CE8;&#x610F;&#x8BBE;&#x7F6E; css &#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6837;&#x5F0F;&#x540D;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/prism" target="_blank">Prism &#x63D2;&#x4EF6;&#x5730;&#x5740;</a> &#xA0;&#xA0; <a href="https://plugins.gitbook.com/plugin/prism-themes" target="_blank">prism-themes &#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-        &quot;prism&quot;,
-        &quot;-highlight&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;prism&quot;</span>,
+        <span class="hljs-string">&quot;-highlight&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;prism&quot;: {
-            &quot;css&quot;: [
-                &quot;prism-themes/themes/prism-base16-ateliersulphurpool.light.css&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;prism&quot;</span>: {
+            <span class="hljs-string">&quot;css&quot;</span>: [
+                <span class="hljs-string">&quot;prism-themes/themes/prism-base16-ateliersulphurpool.light.css&quot;</span>
             ]
         }
     }
 }
 </code></pre>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x80CC;&#x666F;&#x8272;&#x3001;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x7B49;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>website.css</code> &#x5B9A;&#x4E49; <code>pre[class*=&quot;language-&quot;]</code> &#x7C7B;&#x6765;&#x4FEE;&#x6539;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-css">pre[class*=&quot;language-&quot;] {
-    border: none;
-    background-color: #f7f7f7;
-    font-size: 1em;
-    line-height: 1.2em;
+<pre><code class="lang-css"><span class="hljs-selector-tag">pre</span><span class="hljs-selector-attr">[class*=&quot;language-&quot;]</span> {
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f7f7f7</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2em</span>;
 }
 </code></pre>
 <h2 id="advanced-emoji"><a name="advanced-emoji" class="anchor-navigation-ex-anchor" href="#advanced-emoji"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Emoji</h2>
 <p>&#x652F;&#x6301;emoji&#x8868;&#x60C5;</p>
 <p><a href="http://www.emoji-cheat-sheet.com/" target="_blank">emoij&#x8868;&#x60C5;&#x5217;&#x8868;</a><br><a href="https://plugins.gitbook.com/plugin/advanced-emoji" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;advanced-emoji&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;advanced-emoji&quot;</span>
 ]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
@@ -598,12 +602,12 @@
 <h2 id="github"><a name="github" class="anchor-navigation-ex-anchor" href="#github"><i class="fa fa-link" aria-hidden="true"></i></a>Github</h2>
 <p>&#x6DFB;&#x52A0;github&#x56FE;&#x6807;</p>
 <p><a href="https://plugins.gitbook.com/plugin/github" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;github&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;github&quot;</span>
 ],
-&quot;pluginsConfig&quot;: {
-    &quot;github&quot;: {
-        &quot;url&quot;: &quot;https://github.com/zhangjikai&quot;
+<span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;github&quot;</span>: {
+        <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://github.com/zhangjikai&quot;</span>
     }
 }
 </code></pre>
@@ -611,18 +615,18 @@
 <p>&#x6DFB;&#x52A0;&#x9879;&#x76EE;&#x5728; github &#x4E0A;&#x7684; star&#xFF0C;watch&#xFF0C;fork&#x60C5;&#x51B5;</p>
 <p><a href="https://plugins.gitbook.com/plugin/github-buttons" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-        &quot;github-buttons&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;github-buttons&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;github-buttons&quot;: {
-            &quot;repo&quot;: &quot;zhangjikai/gitbook-use&quot;,
-            &quot;types&quot;: [
-                &quot;star&quot;,
-                &quot;watch&quot;,
-                &quot;fork&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;github-buttons&quot;</span>: {
+            <span class="hljs-string">&quot;repo&quot;</span>: <span class="hljs-string">&quot;zhangjikai/gitbook-use&quot;</span>,
+            <span class="hljs-string">&quot;types&quot;</span>: [
+                <span class="hljs-string">&quot;star&quot;</span>,
+                <span class="hljs-string">&quot;watch&quot;</span>,
+                <span class="hljs-string">&quot;fork&quot;</span>
             ],
-            &quot;size&quot;: &quot;small&quot;
+            <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-string">&quot;small&quot;</span>
         }
     }
 }
@@ -630,17 +634,17 @@
 <h2 id="ace-plugin"><a name="ace-plugin" class="anchor-navigation-ex-anchor" href="#ace-plugin"><i class="fa fa-link" aria-hidden="true"></i></a>Ace Plugin</h2>
 <p><a href="https://plugins.gitbook.com/plugin/ace" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <p>&#x4F7F; GitBook &#x652F;&#x6301;ace &#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;line-height &#x4E3A; 1&#xFF0C;&#x4F1A;&#x4F7F;&#x4EE3;&#x7801;&#x663E;&#x5F97;&#x6BD4;&#x8F83;&#x6324;&#xFF0C;&#x800C;&#x4F5C;&#x8005;&#x597D;&#x50CF;&#x6CA1;&#x63D0;&#x4F9B;&#x4FEE;&#x6539;&#x884C;&#x9AD8;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x884C;&#x9AD8;&#xFF0C;&#x53EF;&#x4EE5;&#x5230; <code>node_modules -&gt; github-plugin-ace -&gt; assets -&gt; ace.js</code> &#x4E2D;&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x4E24;&#x884C;&#x4EE3;&#x7801; (30 &#x884C;&#x5DE6;&#x53F3;&#x7684;&#x4F4D;&#x7F6E;)&#xFF1A;</p>
-<pre><code class="lang-js">editor.container.style.lineHeight = 1.25;
+<pre><code class="lang-js">editor.container.style.lineHeight = <span class="hljs-number">1.25</span>;
 editor.renderer.updateFontSize();
 </code></pre>
 <p>&#x4E0D;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x505A;&#x6CD5;&#x6709;&#x4E2A;&#x95EE;&#x9898;&#x5C31;&#x662F;&#xFF0C;&#x6BCF;&#x6B21;&#x4F7F;&#x7528; <code>gitbook install</code> &#x5B89;&#x88C5;&#x65B0;&#x7684;&#x63D2;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x4EE3;&#x7801;&#x53C8;&#x4F1A;&#x91CD;&#x7F6E;&#x4E3A;&#x539F;&#x6765;&#x7684;&#x6837;&#x5B50;&#x3002;&#x53E6;&#x5916;&#x53EF;&#x4EE5;&#x5728; <code>website.css</code> &#x4E2D;&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x7684; css &#x4EE3;&#x7801;&#x6765;&#x6307;&#x5B9A; ace &#x5B57;&#x4F53;&#x7684;&#x5927;&#x5C0F;</p>
-<pre><code class="lang-css">.aceCode {
-  font-size: 14px !important;
+<pre><code class="lang-css"><span class="hljs-selector-class">.aceCode</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span> <span class="hljs-meta">!important</span>;
 }
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#xFF1A;</p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;ace&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;ace&quot;</span>
 ]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
@@ -655,8 +659,8 @@ int main(){
 <h2 id="emphasize"><a name="emphasize" class="anchor-navigation-ex-anchor" href="#emphasize"><i class="fa fa-link" aria-hidden="true"></i></a>Emphasize</h2>
 <p>&#x4E3A;&#x6587;&#x5B57;&#x52A0;&#x4E0A;&#x5E95;&#x8272;</p>
 <p><a href="https://plugins.gitbook.com/plugin/emphasize" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;emphasize&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;emphasize&quot;</span>
 ]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
@@ -668,8 +672,8 @@ int main(){
 <h2 id="katex"><a name="katex" class="anchor-navigation-ex-anchor" href="#katex"><i class="fa fa-link" aria-hidden="true"></i></a>KaTex</h2>
 <p>&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x6570;&#x5B66;&#x516C;&#x5F0F;, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>KaTex</code>&#x548C;<code>MathJax</code>&#x63D2;&#x4EF6;, &#x5B98;&#x7F51;&#x4E0A;&#x8BF4;<code>Katex</code>&#x901F;&#x5EA6;&#x8981;&#x5FEB;&#x4E8E;<code>MathJax</code></p>
 <p><a href="https://plugins.gitbook.com/plugin/katex" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a><br><a href="http://iori.sinaapp.com/17.html" target="_blank">MathJax&#x4F7F;&#x7528;LaTeX&#x8BED;&#x6CD5;&#x7F16;&#x5199;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x6559;&#x7A0B;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;katex&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;katex&quot;</span>
 ]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
@@ -684,14 +688,14 @@ int main(){
 <p>&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x683C;&#x5F0F;&#x663E;&#x793A;&#x6240;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;. &#x8BE5;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x3002;&#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x533A;&#x63D2;&#x4EF6;&#x5B98;&#x7F51;&#x67E5;&#x770B;&#x3002;&#x5982;&#x679C;&#x540C;&#x65F6;&#x4F7F;&#x7528; ace &#x548C;&#x672C;&#x63D2;&#x4EF6;&#xFF0C;&#x672C;&#x63D2;&#x4EF6;&#x8981;&#x5728; ace &#x63D2;&#x4EF6;&#x524D;&#x9762;&#x52A0;&#x8F7D;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/include-codeblock" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-        &quot;include-codeblock&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;include-codeblock&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;include-codeblock&quot;: {
-            &quot;template&quot;: &quot;ace&quot;,
-            &quot;unindent&quot;: &quot;true&quot;,
-            &quot;theme&quot;: &quot;monokai&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;include-codeblock&quot;</span>: {
+            <span class="hljs-string">&quot;template&quot;</span>: <span class="hljs-string">&quot;ace&quot;</span>,
+            <span class="hljs-string">&quot;unindent&quot;</span>: <span class="hljs-string">&quot;true&quot;</span>,
+            <span class="hljs-string">&quot;theme&quot;</span>: <span class="hljs-string">&quot;monokai&quot;</span>
         }
     }
 }
@@ -772,14 +776,14 @@ input[type=checkbox]{
 <p>&#x4F7F;&#x4FA7;&#x8FB9;&#x680F;&#x7684;&#x5BBD;&#x5EA6;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x8C03;&#x8282;</p>
 <p><img src="https://raw.githubusercontent.com/yoshidax/gitbook-plugin-splitter/master/gitbook-splitter-demo.gif" alt="">  </p>
 <p><a href="https://plugins.gitbook.com/plugin/splitter" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;splitter&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;splitter&quot;</span>
 ]
 </code></pre>
 <h2 id="mermaid-gb3"><a name="mermaid-gb3" class="anchor-navigation-ex-anchor" href="#mermaid-gb3"><i class="fa fa-link" aria-hidden="true"></i></a>Mermaid-gb3</h2>
 <p>&#x652F;&#x6301;&#x6E32;&#x67D3;<a href="https://github.com/knsv/mermaid" target="_blank">Mermaid</a>&#x56FE;&#x8868;<br><a href="https://plugins.gitbook.com/plugin/mermaid-gb3" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;mermaid-gb3&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;mermaid-gb3&quot;</span>
 ]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
@@ -814,7 +818,7 @@ Class Stage
 <p>&#x4F7F;&#x7528; function-plot &#x7ED8;&#x5236;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x56FE;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/graph" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a><br><a href="https://mauriciopoppe.github.io/function-plot/" target="_blank">function-plot</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [ &quot;graph&quot; ],
+    <span class="hljs-string">&quot;plugins&quot;</span>: [ <span class="hljs-string">&quot;graph&quot;</span> ],
 }
 </code></pre>
 <p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F; <code>{% graph %}</code> &#x5757;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5FC5;&#x987B;&#x662F;&#x5408;&#x6CD5;&#x7684; JSON &#x683C;&#x5F0F;&#x3002;</p>
@@ -836,17 +840,17 @@ Class Stage
 {% endgraph %}
 </code></pre><p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;
 <div>
-                        <span id="plugin-graph-5"></span>
-                        <script>functionPlot({"title":"1/x * cos(1/x)","grid":true,"xAxis":{"domain":[0.01,1]},"yAxis":{"domain":[-100,100]},"data":[{"fn":"1/x * cos(1/x)","closed":true}],"target":"#plugin-graph-5"});</script>
+                        <span id="plugin-graph-9"></span>
+                        <script>functionPlot({"title":"1/x * cos(1/x)","grid":true,"xAxis":{"domain":[0.01,1]},"yAxis":{"domain":[-100,100]},"data":[{"fn":"1/x * cos(1/x)","closed":true}],"target":"#plugin-graph-9"});</script>
                     </div></p>
 <h2 id="chart"><a name="chart" class="anchor-navigation-ex-anchor" href="#chart"><i class="fa fa-link" aria-hidden="true"></i></a>Chart</h2>
 <p>&#x4F7F;&#x7528; C3.js &#x6216;&#x8005; Highcharts &#x7ED8;&#x5236;&#x56FE;&#x5F62;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/chart" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a><br><a href="https://github.com/c3js/c3" target="_blank">C3.js</a><br><a href="https://github.com/highcharts/highcharts" target="_blank">highcharts</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [ &quot;chart&quot; ],
-    &quot;pluginsConfig&quot;: {
-        &quot;chart&quot;: {
-            &quot;type&quot;: &quot;c3&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [ <span class="hljs-string">&quot;chart&quot;</span> ],
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;chart&quot;</span>: {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;c3&quot;</span>
         }
     }
 }
@@ -874,38 +878,38 @@ Class Stage
 {% endchart %}
 </code></pre><p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;
 <div>
-                    <div id="plugin-chart-6"></div>
-                    <script>c3.generate({"data":{"type":"bar","columns":[["data1",30,200,100,400,150,250],["data2",50,20,10,40,15,25]],"axes":{"data2":"y2"}},"axis":{"y2":{"show":true}},"bindto":"#plugin-chart-6"});</script>
+                    <div id="plugin-chart-10"></div>
+                    <script>c3.generate({"data":{"type":"bar","columns":[["data1",30,200,100,400,150,250],["data2",50,20,10,40,15,25]],"axes":{"data2":"y2"}},"axis":{"y2":{"show":true}},"bindto":"#plugin-chart-10"});</script>
                 </div></p>
 <h2 id="sharing-plus"><a name="sharing-plus" class="anchor-navigation-ex-anchor" href="#sharing-plus"><i class="fa fa-link" aria-hidden="true"></i></a>Sharing-plus</h2>
 <p>&#x5206;&#x4EAB;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x6BD4;&#x9ED8;&#x8BA4;&#x7684; sharing &#x63D2;&#x4EF6;&#x591A;&#x4E86;&#x4E00;&#x4E9B;&#x5206;&#x4EAB;&#x65B9;&#x5F0F;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/sharing-plus" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json"> plugins: [&quot;-sharing&quot;, &quot;sharing-plus&quot;]
+<pre><code class="lang-json"> plugins: [<span class="hljs-string">&quot;-sharing&quot;</span>, <span class="hljs-string">&quot;sharing-plus&quot;</span>]
 </code></pre>
 <p>&#x914D;&#x7F6E;:</p>
-<pre><code class="lang-json">&quot;pluginsConfig&quot;: {
-    &quot;sharing&quot;: {
-       &quot;douban&quot;: false,
-       &quot;facebook&quot;: false,
-       &quot;google&quot;: true,
-       &quot;hatenaBookmark&quot;: false,
-       &quot;instapaper&quot;: false,
-       &quot;line&quot;: true,
-       &quot;linkedin&quot;: true,
-       &quot;messenger&quot;: false,
-       &quot;pocket&quot;: false,
-       &quot;qq&quot;: false,
-       &quot;qzone&quot;: true,
-       &quot;stumbleupon&quot;: false,
-       &quot;twitter&quot;: false,
-       &quot;viber&quot;: false,
-       &quot;vk&quot;: false,
-       &quot;weibo&quot;: true,
-       &quot;whatsapp&quot;: false,
-       &quot;all&quot;: [
-           &quot;facebook&quot;, &quot;google&quot;, &quot;twitter&quot;,
-           &quot;weibo&quot;, &quot;instapaper&quot;, &quot;linkedin&quot;,
-           &quot;pocket&quot;, &quot;stumbleupon&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;sharing&quot;</span>: {
+       <span class="hljs-string">&quot;douban&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;facebook&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;google&quot;</span>: <span class="hljs-literal">true</span>,
+       <span class="hljs-string">&quot;hatenaBookmark&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;instapaper&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;line&quot;</span>: <span class="hljs-literal">true</span>,
+       <span class="hljs-string">&quot;linkedin&quot;</span>: <span class="hljs-literal">true</span>,
+       <span class="hljs-string">&quot;messenger&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;pocket&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;qq&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;qzone&quot;</span>: <span class="hljs-literal">true</span>,
+       <span class="hljs-string">&quot;stumbleupon&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;twitter&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;viber&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;vk&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;weibo&quot;</span>: <span class="hljs-literal">true</span>,
+       <span class="hljs-string">&quot;whatsapp&quot;</span>: <span class="hljs-literal">false</span>,
+       <span class="hljs-string">&quot;all&quot;</span>: [
+           <span class="hljs-string">&quot;facebook&quot;</span>, <span class="hljs-string">&quot;google&quot;</span>, <span class="hljs-string">&quot;twitter&quot;</span>,
+           <span class="hljs-string">&quot;weibo&quot;</span>, <span class="hljs-string">&quot;instapaper&quot;</span>, <span class="hljs-string">&quot;linkedin&quot;</span>,
+           <span class="hljs-string">&quot;pocket&quot;</span>, <span class="hljs-string">&quot;stumbleupon&quot;</span>
        ]
    }
 }
@@ -913,31 +917,31 @@ Class Stage
 <h2 id="tbfed-pagefooter"><a name="tbfed-pagefooter" class="anchor-navigation-ex-anchor" href="#tbfed-pagefooter"><i class="fa fa-link" aria-hidden="true"></i></a>Tbfed-pagefooter</h2>
 <p>&#x4E3A;&#x9875;&#x9762;&#x6DFB;&#x52A0;&#x9875;&#x811A;</p>
 <p><a href="https://plugins.gitbook.com/plugin/tbfed-pagefooter" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-   &quot;tbfed-pagefooter&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+   <span class="hljs-string">&quot;tbfed-pagefooter&quot;</span>
 ],
-&quot;pluginsConfig&quot;: {
-    &quot;tbfed-pagefooter&quot;: {
-        &quot;copyright&quot;:&quot;Copyright &amp;copy zhangjikai.com 2017&quot;,
-        &quot;modify_label&quot;: &quot;&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;&quot;,
-        &quot;modify_format&quot;: &quot;YYYY-MM-DD HH:mm:ss&quot;
+<span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;tbfed-pagefooter&quot;</span>: {
+        <span class="hljs-string">&quot;copyright&quot;</span>:<span class="hljs-string">&quot;Copyright &amp;copy zhangjikai.com 2017&quot;</span>,
+        <span class="hljs-string">&quot;modify_label&quot;</span>: <span class="hljs-string">&quot;&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;&quot;</span>,
+        <span class="hljs-string">&quot;modify_format&quot;</span>: <span class="hljs-string">&quot;YYYY-MM-DD HH:mm:ss&quot;</span>
     }
 }
 </code></pre>
 <h2 id="expandable-chapters-small"><a name="expandable-chapters-small" class="anchor-navigation-ex-anchor" href="#expandable-chapters-small"><i class="fa fa-link" aria-hidden="true"></i></a>Expandable-chapters-small</h2>
 <p>&#x4F7F;&#x5DE6;&#x4FA7;&#x7684;&#x7AE0;&#x8282;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x6298;&#x53E0;</p>
 <p><a href="https://plugins.gitbook.com/plugin/expandable-chapters-small" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">plugins: [&quot;expandable-chapters-small&quot;]
+<pre><code class="lang-json">plugins: [<span class="hljs-string">&quot;expandable-chapters-small&quot;</span>]
 </code></pre>
 <h2 id="sectionx"><a name="sectionx" class="anchor-navigation-ex-anchor" href="#sectionx"><i class="fa fa-link" aria-hidden="true"></i></a>Sectionx</h2>
 <p>&#x5C06;&#x9875;&#x9762;&#x5206;&#x5757;&#x663E;&#x793A;&#xFF0C;&#x6807;&#x7B7E;&#x7684; tag &#x6700;&#x597D;&#x662F;&#x4F7F;&#x7528; b &#x6807;&#x7B7E;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528; h1-h6 &#x53EF;&#x80FD;&#x4F1A;&#x548C;&#x5176;&#x4ED6;&#x63D2;&#x4EF6;&#x51B2;&#x7A81;&#x3002;<br><a href="https://plugins.gitbook.com/plugin/sectionx" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-       &quot;sectionx&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+       <span class="hljs-string">&quot;sectionx&quot;</span>
    ],
-    &quot;pluginsConfig&quot;: {
-        &quot;sectionx&quot;: {
-          &quot;tag&quot;: &quot;b&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;sectionx&quot;</span>: {
+          <span class="hljs-string">&quot;tag&quot;</span>: <span class="hljs-string">&quot;b&quot;</span>
         }
       }
 }
@@ -948,45 +952,45 @@ Class Stage
 </div></div></div></sec>
 <h2 id="ga"><a name="ga" class="anchor-navigation-ex-anchor" href="#ga"><i class="fa fa-link" aria-hidden="true"></i></a>GA</h2>
 <p>Google &#x7EDF;&#x8BA1;<br><a href="https://plugins.gitbook.com/plugin/ga" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;ga&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;ga&quot;</span>
  ],
-&quot;pluginsConfig&quot;: {
-    &quot;ga&quot;: {
-        &quot;token&quot;: &quot;UA-XXXX-Y&quot;
+<span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;ga&quot;</span>: {
+        <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-string">&quot;UA-XXXX-Y&quot;</span>
     }
 }
 </code></pre>
 <h2 id="3-ba"><a name="3-ba" class="anchor-navigation-ex-anchor" href="#3-ba"><i class="fa fa-link" aria-hidden="true"></i></a>3-ba</h2>
 <p>&#x767E;&#x5EA6;&#x7EDF;&#x8BA1;<br><a href="https://plugins.gitbook.com/plugin/3-ba" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [&quot;3-ba&quot;],
-    &quot;pluginsConfig&quot;: {
-        &quot;3-ba&quot;: {
-            &quot;token&quot;: &quot;xxxxxxxx&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;3-ba&quot;</span>],
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;3-ba&quot;</span>: {
+            <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-string">&quot;xxxxxxxx&quot;</span>
         }
     }
 }
 </code></pre>
 <h2 id="donate"><a name="donate" class="anchor-navigation-ex-anchor" href="#donate"><i class="fa fa-link" aria-hidden="true"></i></a>Donate</h2>
 <p>&#x6253;&#x8D4F;&#x63D2;&#x4EF6;<br><a href="https://plugins.gitbook.com/plugin/donate" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
-<pre><code class="lang-json">&quot;plugins&quot;: [
-    &quot;donate&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;donate&quot;</span>
 ],
-&quot;pluginsConfig&quot;: {
-    &quot;donate&quot;: {
-        &quot;wechat&quot;: &quot;https://zhangjikai.com/resource/weixin.png&quot;,
-        &quot;alipay&quot;: &quot;https://zhangjikai.com/resource/alipay.png&quot;,
-        &quot;title&quot;: &quot;&quot;,
-        &quot;button&quot;: &quot;&#x8D4F;&quot;,
-        &quot;alipayText&quot;: &quot;&#x652F;&#x4ED8;&#x5B9D;&#x6253;&#x8D4F;&quot;,
-        &quot;wechatText&quot;: &quot;&#x5FAE;&#x4FE1;&#x6253;&#x8D4F;&quot;
+<span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;donate&quot;</span>: {
+        <span class="hljs-string">&quot;wechat&quot;</span>: <span class="hljs-string">&quot;https://zhangjikai.com/resource/weixin.png&quot;</span>,
+        <span class="hljs-string">&quot;alipay&quot;</span>: <span class="hljs-string">&quot;https://zhangjikai.com/resource/alipay.png&quot;</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;button&quot;</span>: <span class="hljs-string">&quot;&#x8D4F;&quot;</span>,
+        <span class="hljs-string">&quot;alipayText&quot;</span>: <span class="hljs-string">&quot;&#x652F;&#x4ED8;&#x5B9D;&#x6253;&#x8D4F;&quot;</span>,
+        <span class="hljs-string">&quot;wechatText&quot;</span>: <span class="hljs-string">&quot;&#x5FAE;&#x4FE1;&#x6253;&#x8D4F;&quot;</span>
     }
 }
 </code></pre>
 <h2 id="local-video"><a name="local-video" class="anchor-navigation-ex-anchor" href="#local-video"><i class="fa fa-link" aria-hidden="true"></i></a>Local Video</h2>
 <p>&#x4F7F;&#x7528;Video.js &#x64AD;&#x653E;&#x672C;&#x5730;&#x89C6;&#x9891;<br><a href="https://plugins.gitbook.com/plugin/local-video" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
-<pre><code class="lang-json">&quot;plugins&quot;: [ &quot;local-video&quot; ]
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [ <span class="hljs-string">&quot;local-video&quot;</span> ]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;&#x4E3A;&#x4E86;&#x4F7F;&#x89C6;&#x9891;&#x53EF;&#x4EE5;&#x81EA;&#x9002;&#x5E94;&#xFF0C;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x89C6;&#x9891;&#x7684;<code>width</code>&#x4E3A;100%&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x6BD4;&#x4E3A;<code>16:9</code>&#xFF0C;&#x5982;&#x4E0B;&#x9762;&#x6240;&#x793A;</p>
 <pre><code>{% raw %}
@@ -1000,9 +1004,9 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 &lt;/video&gt;
 {% endraw %}
 </code></pre><p>&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x518D;&#x914D;&#x7F6E;&#x4E0B;css&#xFF0C;&#x5373;&#x5728;website.css&#x4E2D;&#x52A0;&#x5165;</p>
-<pre><code class="lang-css">.video-js {
-    width:100%;
-    height: 100%;
+<pre><code class="lang-css"><span class="hljs-selector-class">.video-js</span> {
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
 }
 </code></pre>
 <p><br></p>
@@ -1019,13 +1023,13 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 <p>&#x81EA;&#x52A8;&#x751F;&#x6210;&#x672C;&#x9875;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x3002;&#x53E6;&#x5916; GitBook &#x5728;&#x5904;&#x7406;&#x91CD;&#x590D;&#x7684;&#x6807;&#x9898;&#x65F6;&#x6709;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x5C3D;&#x91CF;&#x4E0D;&#x9002;&#x7528;&#x91CD;&#x590D;&#x7684;&#x6807;&#x9898;&#x3002;
 <a href="https://plugins.gitbook.com/plugin/simple-page-toc" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot; : [
-        &quot;simple-page-toc&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span> : [
+        <span class="hljs-string">&quot;simple-page-toc&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;simple-page-toc&quot;: {
-            &quot;maxDepth&quot;: 3,
-            &quot;skipFirstH1&quot;: true
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;simple-page-toc&quot;</span>: {
+            <span class="hljs-string">&quot;maxDepth&quot;</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-string">&quot;skipFirstH1&quot;</span>: <span class="hljs-literal">true</span>
         }
     }
 }
@@ -1035,7 +1039,7 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 <p>&#x6DFB;&#x52A0; Github &#x98CE;&#x683C;&#x7684;&#x951A;&#x70B9;&#x6837;&#x5F0F;</p>
 <p><img src="https://cloud.githubusercontent.com/assets/2666107/3465465/9fc9a502-0266-11e4-80ca-09a1dad1473e.png" alt=""></p>
 <p><a href="https://plugins.gitbook.com/plugin/anchors" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
-<pre><code class="lang-json">&quot;plugins&quot; : [ &quot;anchors&quot; ]
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span> : [ <span class="hljs-string">&quot;anchors&quot;</span> ]
 </code></pre>
 <h2 id="anchor-navigation-ex"><a name="anchor-navigation-ex" class="anchor-navigation-ex-anchor" href="#anchor-navigation-ex"><i class="fa fa-link" aria-hidden="true"></i></a>Anchor-navigation-ex</h2>
 <p>&#x6DFB;&#x52A0;Toc&#x5230;&#x4FA7;&#x8FB9;&#x60AC;&#x6D6E;&#x5BFC;&#x822A;&#x4EE5;&#x53CA;&#x56DE;&#x5230;&#x9876;&#x90E8;&#x6309;&#x94AE;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x4E24;&#x70B9;&#xFF1A;</p>
@@ -1050,37 +1054,37 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 </ul>
 <p><a href="https://plugins.gitbook.com/plugin/anchor-navigation-ex" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-        &quot;anchor-navigation-ex&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;anchor-navigation-ex&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;anchor-navigation-ex&quot;: {
-            &quot;isRewritePageTitle&quot;: true,
-            &quot;isShowTocTitleIcon&quot;: true,
-            &quot;tocLevel1Icon&quot;: &quot;fa fa-hand-o-right&quot;,
-            &quot;tocLevel2Icon&quot;: &quot;fa fa-hand-o-right&quot;,
-            &quot;tocLevel3Icon&quot;: &quot;fa fa-hand-o-right&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;anchor-navigation-ex&quot;</span>: {
+            <span class="hljs-string">&quot;isRewritePageTitle&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;isShowTocTitleIcon&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;tocLevel1Icon&quot;</span>: <span class="hljs-string">&quot;fa fa-hand-o-right&quot;</span>,
+            <span class="hljs-string">&quot;tocLevel2Icon&quot;</span>: <span class="hljs-string">&quot;fa fa-hand-o-right&quot;</span>,
+            <span class="hljs-string">&quot;tocLevel3Icon&quot;</span>: <span class="hljs-string">&quot;fa fa-hand-o-right&quot;</span>
         }
     }
 }
 </code></pre>
 <h2 id="edit-link"><a name="edit-link" class="anchor-navigation-ex-anchor" href="#edit-link"><i class="fa fa-link" aria-hidden="true"></i></a>Edit Link</h2>
 <p>&#x5982;&#x679C;&#x5C06; GitBook &#x7684;&#x6E90;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;github&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7684;&#x4ED3;&#x5E93;&#x4E0A;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x5230;&#x5F53;&#x524D;&#x9875;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x4E0A;&#x3002;<br><a href="https://plugins.gitbook.com/plugin/edit-link" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
-<pre><code class="lang-json">&quot;plugins&quot;: [&quot;edit-link&quot;],
-&quot;pluginsConfig&quot;: {
-    &quot;edit-link&quot;: {
-        &quot;base&quot;: &quot;https://github.com/USER/REPO/edit/BRANCH&quot;,
-        &quot;label&quot;: &quot;Edit This Page&quot;
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;edit-link&quot;</span>],
+<span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;edit-link&quot;</span>: {
+        <span class="hljs-string">&quot;base&quot;</span>: <span class="hljs-string">&quot;https://github.com/USER/REPO/edit/BRANCH&quot;</span>,
+        <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;Edit This Page&quot;</span>
     }
 }
 </code></pre>
 <h2 id="sitemap-general"><a name="sitemap-general" class="anchor-navigation-ex-anchor" href="#sitemap-general"><i class="fa fa-link" aria-hidden="true"></i></a>Sitemap-general</h2>
 <p>&#x751F;&#x6210;sitemap<br><a href="https://plugins.gitbook.com/plugin/sitemap-general" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [&quot;sitemap-general&quot;],
-    &quot;pluginsConfig&quot;: {
-        &quot;sitemap-general&quot;: {
-            &quot;prefix&quot;: &quot;http://gitbook.zhangjikai.com&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;sitemap-general&quot;</span>],
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;sitemap-general&quot;</span>: {
+            <span class="hljs-string">&quot;prefix&quot;</span>: <span class="hljs-string">&quot;http://gitbook.zhangjikai.com&quot;</span>
         }
     }
 }
@@ -1088,17 +1092,17 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 <h2 id="favicon"><a name="favicon" class="anchor-navigation-ex-anchor" href="#favicon"><i class="fa fa-link" aria-hidden="true"></i></a>Favicon</h2>
 <p>&#x66F4;&#x6539;&#x7F51;&#x7AD9;&#x7684; favicon.ico<br><a href="https://plugins.gitbook.com/plugin/favicon" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-        &quot;favicon&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;favicon&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;favicon&quot;: {
-            &quot;shortcut&quot;: &quot;assets/images/favicon.ico&quot;,
-            &quot;bookmark&quot;: &quot;assets/images/favicon.ico&quot;,
-            &quot;appleTouch&quot;: &quot;assets/images/apple-touch-icon.png&quot;,
-            &quot;appleTouchMore&quot;: {
-                &quot;120x120&quot;: &quot;assets/images/apple-touch-icon-120x120.png&quot;,
-                &quot;180x180&quot;: &quot;assets/images/apple-touch-icon-180x180.png&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;favicon&quot;</span>: {
+            <span class="hljs-string">&quot;shortcut&quot;</span>: <span class="hljs-string">&quot;assets/images/favicon.ico&quot;</span>,
+            <span class="hljs-string">&quot;bookmark&quot;</span>: <span class="hljs-string">&quot;assets/images/favicon.ico&quot;</span>,
+            <span class="hljs-string">&quot;appleTouch&quot;</span>: <span class="hljs-string">&quot;assets/images/apple-touch-icon.png&quot;</span>,
+            <span class="hljs-string">&quot;appleTouchMore&quot;</span>: {
+                <span class="hljs-string">&quot;120x120&quot;</span>: <span class="hljs-string">&quot;assets/images/apple-touch-icon-120x120.png&quot;</span>,
+                <span class="hljs-string">&quot;180x180&quot;</span>: <span class="hljs-string">&quot;assets/images/apple-touch-icon-180x180.png&quot;</span>
             }
         }
     }
@@ -1106,12 +1110,12 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 </code></pre>
 <h2 id="todo"><a name="todo" class="anchor-navigation-ex-anchor" href="#todo"><i class="fa fa-link" aria-hidden="true"></i></a>Todo</h2>
 <p>&#x6DFB;&#x52A0; Todo &#x529F;&#x80FD;&#x3002;&#x9ED8;&#x8BA4;&#x7684; checkbox &#x4F1A;&#x5411;&#x53F3;&#x504F;&#x79FB; 2em&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5E0C;&#x671B;&#x504F;&#x79FB;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>website.css</code> &#x91CC;&#x52A0;&#x4E0A;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;:</p>
-<pre><code class="lang-css">input[type=checkbox]{
-    margin-left: -2em;
+<pre><code class="lang-css"><span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type=checkbox]</span>{
+    <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">2em</span>;
 }
 </code></pre>
 <p><a href="https://plugins.gitbook.com/plugin/todo" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a>  </p>
-<pre><code class="lang-json">&quot;plugins&quot;: [&quot;todo&quot;]
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;todo&quot;</span>]
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
 <ul>
@@ -1122,14 +1126,14 @@ poster=&quot;https://zhangjikai.com/resource/poster.jpg&quot; data-setup=&apos;{
 <p>&#x6A21;&#x62DF;&#x7EC8;&#x7AEF;&#x663E;&#x793A;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x591A;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x4E0D;&#x8FC7;&#x5199;&#x8D77;&#x6765;&#x6709;&#x4E9B;&#x9EBB;&#x70E6;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/terminal" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [
-        &quot;terminal&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;terminal&quot;</span>
     ],
-    &quot;pluginsConfig&quot;: {
-        &quot;terminal&quot;: {
-            &quot;copyButtons&quot;: true,
-            &quot;fade&quot;: false,
-            &quot;style&quot;: &quot;flat&quot;
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;terminal&quot;</span>: {
+            <span class="hljs-string">&quot;copyButtons&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;fade&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;style&quot;</span>: <span class="hljs-string">&quot;flat&quot;</span>
         }
     }
 }
@@ -1178,7 +1182,7 @@ What about an error message?
 <p>&#x4E3A;&#x4EE3;&#x7801;&#x5757;&#x6DFB;&#x52A0;&#x590D;&#x5236;&#x7684;&#x6309;&#x94AE;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/copy-code-button" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [&quot;copy-code-button&quot;]
+    <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;copy-code-button&quot;</span>]
 }
 </code></pre>
 <p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
@@ -1187,7 +1191,7 @@ What about an error message?
 <p>&#x6DFB;&#x52A0;&#x4E0D;&#x540C; alerts &#x6837;&#x5F0F;&#x7684; blockquotes&#xFF0C;&#x76EE;&#x524D;&#x5305;&#x542B; info, warning, danger &#x548C; success &#x56DB;&#x79CD;&#x6837;&#x5F0F;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/alerts" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [&quot;alerts&quot;]
+    <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;alerts&quot;</span>]
 }
 </code></pre>
 <p>&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
@@ -1235,7 +1239,7 @@ Success styling
 <p>&#x5C55;&#x793A; csv &#x6587;&#x4EF6;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/include-csv" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [&quot;include-csv&quot;]
+    <span class="hljs-string">&quot;plugins&quot;</span>: [<span class="hljs-string">&quot;include-csv&quot;</span>]
 }
 </code></pre>
 <p>&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
@@ -1251,7 +1255,7 @@ Success styling
 </code></pre><p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F; block &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684; musicxml &#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x6709;&#x6362;&#x884C;&#x548C;&#x7A7A;&#x683C;&#x3002;</p>
 <pre><code>{% musicxml %}assets/musicxml/mandoline - debussy.xml{% endmusicxml %}
 </code></pre><p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#x6240;&#x793A;
-<div class="musicxml" id="a1d3faad-e4df-48b7-9e1d-22d00cae84c9" data-url="assets/musicxml/mandoline - debussy.xml"></div></p>
+<div class="musicxml" id="f8e4af3e-ed84-4582-8cd0-02d16f371e73" data-url="assets/musicxml/mandoline - debussy.xml"></div></p>
 <h2 id="klipse"><a name="klipse" class="anchor-navigation-ex-anchor" href="#klipse"><i class="fa fa-link" aria-hidden="true"></i></a>Klipse</h2>
 <p>&#x96C6;&#x6210; Klipse (online code evaluator)</p>
 <p><a href="https://plugins.gitbook.com/plugin/klipse" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a><br><a href="https://github.com/viebel/klipse" target="_blank">Klipse</a></p>
@@ -1301,11 +1305,11 @@ print [x + 1 for x in range(10)]
     }
 }
 </code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49; css &#x6765;&#x4FEE;&#x6539; select &#x7684;&#x663E;&#x793A;&#x6837;&#x5F0F;&#xFF1A;</p>
-<pre><code class="lang-css">.versions-select select {
-    height: 2em;
-    line-height: 2em;
-    border-radius: 4px;
-    background: #efefef;
+<pre><code class="lang-css"><span class="hljs-selector-class">.versions-select</span> <span class="hljs-selector-tag">select</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">2em</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2em</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#efefef</span>;
 }
 </code></pre>
 <p>&#x6548;&#x679C;&#x89C1;&#x5DE6;&#x4E0A;&#x89D2;&#x3002;</p>
@@ -1313,18 +1317,18 @@ print [x + 1 for x in range(10)]
 <p>&#x6DFB;&#x52A0; rss &#x8BA2;&#x9605;&#x529F;&#x80FD;&#x3002;</p>
 <p><a href="https://plugins.gitbook.com/plugin/rss" target="_blank">&#x63D2;&#x4EF6;&#x5730;&#x5740;</a></p>
 <pre><code class="lang-json">{
-    &quot;plugins&quot;: [ &quot;rss&quot; ],
-    &quot;pluginsConfig&quot;: {
-        &quot;rss&quot;: {
-            &quot;title&quot;: &quot;GitBook &#x4F7F;&#x7528;&#x6559;&#x7A0B;&quot;,
-            &quot;description&quot;: &quot;&#x8BB0;&#x5F55; GitBook &#x7684;&#x914D;&#x7F6E;&#x548C;&#x4E00;&#x4E9B;&#x63D2;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&quot;,
-            &quot;author&quot;: &quot;Jikai Zhang&quot;,
-            &quot;feed_url&quot;: &quot;http://gitbook.zhangjikai.com/rss&quot;,
-            &quot;site_url&quot;: &quot;http://gitbook.zhangjikai.com/&quot;,
-            &quot;managingEditor&quot;: &quot;me@zhangjikai.com&quot;,
-            &quot;webMaster&quot;: &quot;me@zhangjikai.com&quot;,
-            &quot;categories&quot;: [
-                &quot;gitbook&quot;
+    <span class="hljs-string">&quot;plugins&quot;</span>: [ <span class="hljs-string">&quot;rss&quot;</span> ],
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;rss&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;GitBook &#x4F7F;&#x7528;&#x6559;&#x7A0B;&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x8BB0;&#x5F55; GitBook &#x7684;&#x914D;&#x7F6E;&#x548C;&#x4E00;&#x4E9B;&#x63D2;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&quot;</span>,
+            <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;Jikai Zhang&quot;</span>,
+            <span class="hljs-string">&quot;feed_url&quot;</span>: <span class="hljs-string">&quot;http://gitbook.zhangjikai.com/rss&quot;</span>,
+            <span class="hljs-string">&quot;site_url&quot;</span>: <span class="hljs-string">&quot;http://gitbook.zhangjikai.com/&quot;</span>,
+            <span class="hljs-string">&quot;managingEditor&quot;</span>: <span class="hljs-string">&quot;me@zhangjikai.com&quot;</span>,
+            <span class="hljs-string">&quot;webMaster&quot;</span>: <span class="hljs-string">&quot;me@zhangjikai.com&quot;</span>,
+            <span class="hljs-string">&quot;categories&quot;</span>: [
+                <span class="hljs-string">&quot;gitbook&quot;</span>
             ]
         }
     }
@@ -1374,7 +1378,7 @@ print [x + 1 for x in range(10)]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"插件","level":"6.6","depth":1,"next":{"title":"主题","level":"6.7","depth":1,"path":"gitbook_files/themes.md","ref":"gitbook_files/themes.md","articles":[]},"previous":{"title":"配置","level":"6.5","depth":1,"path":"gitbook_files/settings.md","ref":"gitbook_files/settings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"gitbook_files/plugins.md","mtime":"2017-12-16T09:08:50.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T02:41:52.764Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"插件","level":"6.6","depth":1,"next":{"title":"主题","level":"6.7","depth":1,"path":"gitbook_files/themes.md","ref":"gitbook_files/themes.md","articles":[]},"previous":{"title":"配置","level":"6.5","depth":1,"path":"gitbook_files/settings.md","ref":"gitbook_files/settings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"gitbook_files/plugins.md","mtime":"2017-12-16T09:08:50.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T03:22:51.693Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

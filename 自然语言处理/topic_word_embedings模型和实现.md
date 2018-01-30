@@ -42,7 +42,7 @@
 
 #### (1) 将文件放在linux下，然后执行如下命令:
 
-```
+```bash
 cd /home/user/LDA/
 
 gunzip GibbsLDA++-0.2.tar.gz
@@ -54,7 +54,7 @@ cd \GibbsLDA++-0.2
 
 #### (2) 执行如下命令
 
- ```
+ ```bash
  make clean
  make
  ```
@@ -62,18 +62,18 @@ cd \GibbsLDA++-0.2
 #### (3) 在执行命令后会出现报错，按照如下操作进行修改
 
 - 在src/utill.cpp 文件头加入：
-```
+```bash
 include <stdio.h>
 #include <stdlib.h>
 ```
 
 - 在src/utill.h 文件头加入：
-```
+```c++
 #include <stdlib.h>
 ```
 
 - 在src/lda.cp 文件头加入：
-```
+```c++
 #include <stdio.h>
 ```
 - 重新编译
@@ -90,11 +90,11 @@ include <stdio.h>
 
 #### (5) 运行
 - 执行命令
-```
+```bash
 lda -est [-alpha <double>] [-beta <double>] [-ntopics <int>] [-niters <int>] [-savestep <int>] [-twords <int>] -dfile <string>
 ```
 - 例子:
-```
+```bash
 src/lda -est -alpha 0.5 -beta 0.1 -ntopics 100 -niters 1000 -savestep 100 -twords 20 -dfile /home/leichen/LDA/data.dat
 ```
 

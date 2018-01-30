@@ -18,6 +18,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
@@ -538,99 +542,103 @@
 <h1 id="2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;"><a name="2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;spark&#x7684;&#x76F8;&#x5173;&#x4EE3;&#x7801;</h1>
 <ul>
 <li><p>&#x8BAD;&#x7EC3;&#x4EE3;&#x7801;</p>
-<pre><code>import ml.dmlc.xgboost4j.scala.spark.XGBoost
-import ml.dmlc.xgboost4j.scala.spark.XGBoostModel
-import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
-import org.apache.spark.ml.linalg.{DenseVector, Vector, Vectors}
-import ml.dmlc.xgboost4j.scala.spark.XGBoostClassificationModel
-import ml.dmlc.xgboost4j.scala.{Booster, XGBoost =&gt; SXGBoost}
-import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
-</code></pre><pre><code>def train(spark:SparkSession,featuresDF:DataFrame,params_map:Map[String,String]): XGBoostModel ={
-  val sc = spark.sparkContext
-  val model_name = params_map(&quot;model_name&quot;).toString
-  val tree_deep = params_map(&quot;tree_deep&quot;).toString.toInt
-  val tree_num = params_map(&quot;tree_num&quot;).toString.toInt
-  val lr = params_map(&quot;lr&quot;).toString.toDouble
-  val scale_pos_weight = params_map(&quot;scale_pos_weight&quot;).toString.toInt
-  val lambda_value = params_map(&quot;lambda_value&quot;).toString.toDouble
-  val colsample_bytree = params_map(&quot;colsample_bytree&quot;).toString.toDouble
-  val n_workers = params_map(&quot;n_workers&quot;).toString.toInt
-  val seed_max = params_map(&quot;seed&quot;).toString.toInt
-  val seed = scala.util.Random.nextInt(seed_max)
-  val gamma = params_map.get(&quot;gamma&quot;).getOrElse(&quot;0.0&quot;).toString.toFloat
-  val objective = &quot;binary:logistic&quot;
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> ml.dmlc.xgboost4j.scala.spark.<span class="hljs-type">XGBoost</span>
+<span class="hljs-keyword">import</span> ml.dmlc.xgboost4j.scala.spark.<span class="hljs-type">XGBoostModel</span>
+<span class="hljs-keyword">import</span> org.apache.spark.sql.{<span class="hljs-type">DataFrame</span>, <span class="hljs-type">SaveMode</span>, <span class="hljs-type">SparkSession</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.{<span class="hljs-type">DenseVector</span>, <span class="hljs-type">Vector</span>, <span class="hljs-type">Vectors</span>}
+<span class="hljs-keyword">import</span> ml.dmlc.xgboost4j.scala.spark.<span class="hljs-type">XGBoostClassificationModel</span>
+<span class="hljs-keyword">import</span> ml.dmlc.xgboost4j.scala.{<span class="hljs-type">Booster</span>, <span class="hljs-type">XGBoost</span> =&gt; <span class="hljs-type">SXGBoost</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.evaluation.<span class="hljs-type">BinaryClassificationMetrics</span>
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">train</span></span>(spark:<span class="hljs-type">SparkSession</span>,featuresDF:<span class="hljs-type">DataFrame</span>,params_map:<span class="hljs-type">Map</span>[<span class="hljs-type">String</span>,<span class="hljs-type">String</span>]): <span class="hljs-type">XGBoostModel</span> ={
+  <span class="hljs-keyword">val</span> sc = spark.sparkContext
+  <span class="hljs-keyword">val</span> model_name = params_map(<span class="hljs-string">&quot;model_name&quot;</span>).toString
+  <span class="hljs-keyword">val</span> tree_deep = params_map(<span class="hljs-string">&quot;tree_deep&quot;</span>).toString.toInt
+  <span class="hljs-keyword">val</span> tree_num = params_map(<span class="hljs-string">&quot;tree_num&quot;</span>).toString.toInt
+  <span class="hljs-keyword">val</span> lr = params_map(<span class="hljs-string">&quot;lr&quot;</span>).toString.toDouble
+  <span class="hljs-keyword">val</span> scale_pos_weight = params_map(<span class="hljs-string">&quot;scale_pos_weight&quot;</span>).toString.toInt
+  <span class="hljs-keyword">val</span> lambda_value = params_map(<span class="hljs-string">&quot;lambda_value&quot;</span>).toString.toDouble
+  <span class="hljs-keyword">val</span> colsample_bytree = params_map(<span class="hljs-string">&quot;colsample_bytree&quot;</span>).toString.toDouble
+  <span class="hljs-keyword">val</span> n_workers = params_map(<span class="hljs-string">&quot;n_workers&quot;</span>).toString.toInt
+  <span class="hljs-keyword">val</span> seed_max = params_map(<span class="hljs-string">&quot;seed&quot;</span>).toString.toInt
+  <span class="hljs-keyword">val</span> seed = scala.util.<span class="hljs-type">Random</span>.nextInt(seed_max)
+  <span class="hljs-keyword">val</span> gamma = params_map.get(<span class="hljs-string">&quot;gamma&quot;</span>).getOrElse(<span class="hljs-string">&quot;0.0&quot;</span>).toString.toFloat
+  <span class="hljs-keyword">val</span> objective = <span class="hljs-string">&quot;binary:logistic&quot;</span>
 
-  val paramMap = List(
-    &quot;eta&quot; -&gt; lr,
-    &quot;max_depth&quot; -&gt; tree_deep,
-    &quot;lambda&quot; -&gt; lambda_value,
-    &quot;objective&quot; -&gt; objective,
-    &quot;scale_pos_weight&quot; -&gt; scale_pos_weight,
-    &quot;colsample_bytree&quot; -&gt; colsample_bytree,
-    &quot;subsample&quot;-&gt;0.75,
-    &quot;seed&quot; -&gt; seed).toMap
-  var xgboostModel = XGBoost.trainWithDataFrame(featuresDF, paramMap, tree_num, nWorkers = n_workers, useExternalMemory = true)
-  val model_name_hadoop = model_name + &quot;_hadoop&quot;
+  <span class="hljs-keyword">val</span> paramMap = <span class="hljs-type">List</span>(
+    <span class="hljs-string">&quot;eta&quot;</span> -&gt; lr,
+    <span class="hljs-string">&quot;max_depth&quot;</span> -&gt; tree_deep,
+    <span class="hljs-string">&quot;lambda&quot;</span> -&gt; lambda_value,
+    <span class="hljs-string">&quot;objective&quot;</span> -&gt; objective,
+    <span class="hljs-string">&quot;scale_pos_weight&quot;</span> -&gt; scale_pos_weight,
+    <span class="hljs-string">&quot;colsample_bytree&quot;</span> -&gt; colsample_bytree,
+    <span class="hljs-string">&quot;subsample&quot;</span>-&gt;<span class="hljs-number">0.75</span>,
+    <span class="hljs-string">&quot;seed&quot;</span> -&gt; seed).toMap
+  <span class="hljs-keyword">var</span> xgboostModel = <span class="hljs-type">XGBoost</span>.trainWithDataFrame(featuresDF, paramMap, tree_num, nWorkers = n_workers, useExternalMemory = <span class="hljs-literal">true</span>)
+  <span class="hljs-keyword">val</span> model_name_hadoop = model_name + <span class="hljs-string">&quot;_hadoop&quot;</span>
   xgboostModel.saveModelAsHadoopFile(model_name_hadoop)(sc)
 
-  return xgboostModel
+  <span class="hljs-keyword">return</span> xgboostModel
 }
-</code></pre></li>
+</code></pre>
+</li>
 <li><p>&#x9884;&#x6D4B;&#x4EE3;&#x7801;</p>
-<pre><code>def predict(spark:SparkSession,featuresDF:DataFrame,xgboostModel:XGBoostModel): Unit ={
-  import spark.implicits._
-  val sc = spark.sparkContext
-  val predict_test = xgboostModel.transform(featuresDF)
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">predict</span></span>(spark:<span class="hljs-type">SparkSession</span>,featuresDF:<span class="hljs-type">DataFrame</span>,xgboostModel:<span class="hljs-type">XGBoostModel</span>): <span class="hljs-type">Unit</span> ={
+  <span class="hljs-keyword">import</span> spark.implicits._
+  <span class="hljs-keyword">val</span> sc = spark.sparkContext
+  <span class="hljs-keyword">val</span> predict_test = xgboostModel.transform(featuresDF)
 
-  val prob_label_df = predict_test.map{x=&gt;
-    val label = x.getAs(&quot;label&quot;).toString.toDouble
-    val probabilities = x.getAs[DenseVector](&quot;probabilities&quot;).toArray(1)
+  <span class="hljs-keyword">val</span> prob_label_df = predict_test.map{x=&gt;
+    <span class="hljs-keyword">val</span> label = x.getAs(<span class="hljs-string">&quot;label&quot;</span>).toString.toDouble
+    <span class="hljs-keyword">val</span> probabilities = x.getAs[<span class="hljs-type">DenseVector</span>](<span class="hljs-string">&quot;probabilities&quot;</span>).toArray(<span class="hljs-number">1</span>)
     (probabilities,label)
   }
 
-  //auc&#x8BA1;&#x7B97;
-  val dataset_metric = new BinaryClassificationMetrics(prob_label_df.rdd)
-  val dataset_auc = dataset_metric.areaUnderROC()
-  println(&quot;dataset auc:&quot; + dataset_auc)
+  <span class="hljs-comment">//auc&#x8BA1;&#x7B97;</span>
+  <span class="hljs-keyword">val</span> dataset_metric = <span class="hljs-keyword">new</span> <span class="hljs-type">BinaryClassificationMetrics</span>(prob_label_df.rdd)
+  <span class="hljs-keyword">val</span> dataset_auc = dataset_metric.areaUnderROC()
+  println(<span class="hljs-string">&quot;dataset auc:&quot;</span> + dataset_auc)
 
-  //ks&#x8BA1;&#x7B97;
-  val ks_result = computer(prob_label_df,20,sc)
-  val ksMax = ks_result._1
-  val ksInfosDF = ks_result._2.toList.toDF(&quot;level&quot;, &quot;good&quot;, &quot;bad&quot;, &quot;numGood&quot;, &quot;numBad&quot;,
-    &quot;pctGood&quot;, &quot;pctBad&quot;, &quot;ks&quot;, &quot;pBad&quot;, &quot;scoreMin&quot;, &quot;scoreMean&quot;, &quot;scoreMax&quot;, &quot;len&quot;, &quot;pBad2Total&quot;)
+  <span class="hljs-comment">//ks&#x8BA1;&#x7B97;</span>
+  <span class="hljs-keyword">val</span> ks_result = computer(prob_label_df,<span class="hljs-number">20</span>,sc)
+  <span class="hljs-keyword">val</span> ksMax = ks_result._1
+  <span class="hljs-keyword">val</span> ksInfosDF = ks_result._2.toList.toDF(<span class="hljs-string">&quot;level&quot;</span>, <span class="hljs-string">&quot;good&quot;</span>, <span class="hljs-string">&quot;bad&quot;</span>, <span class="hljs-string">&quot;numGood&quot;</span>, <span class="hljs-string">&quot;numBad&quot;</span>,
+    <span class="hljs-string">&quot;pctGood&quot;</span>, <span class="hljs-string">&quot;pctBad&quot;</span>, <span class="hljs-string">&quot;ks&quot;</span>, <span class="hljs-string">&quot;pBad&quot;</span>, <span class="hljs-string">&quot;scoreMin&quot;</span>, <span class="hljs-string">&quot;scoreMean&quot;</span>, <span class="hljs-string">&quot;scoreMax&quot;</span>, <span class="hljs-string">&quot;len&quot;</span>, <span class="hljs-string">&quot;pBad2Total&quot;</span>)
   ksInfosDF.show()
-  println(&quot;&#x6700;&#x5927;ks:&quot;,ksMax)
+  println(<span class="hljs-string">&quot;&#x6700;&#x5927;ks:&quot;</span>,ksMax)
 }
-</code></pre></li>
+</code></pre>
+</li>
 <li><p>&#x6A21;&#x578B;&#x52A0;&#x8F7D;</p>
 </li>
 </ul>
-<pre><code>/**
+<pre><code class="lang-scala"><span class="hljs-comment">/**
    * &#x4ECE;hadoop&#x6A21;&#x578B;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x8F7D;&#x6A21;&#x578B;,&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x5BF9;&#x8C61;
    * @param spark
    * @param model_name
    * @return
-   */
- def loadModelWithHadoopFile(spark:SparkSession,model_name:String): XGBoostModel ={
-   val model_name_hadoop = model_name + &quot;_hadoop&quot;
-   val sc = spark.sparkContext
-   val xgboostModel = XGBoost.loadModelFromHadoopFile(model_name_hadoop)(sc)
-   return  xgboostModel
+   */</span>
+ <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadModelWithHadoopFile</span></span>(spark:<span class="hljs-type">SparkSession</span>,model_name:<span class="hljs-type">String</span>): <span class="hljs-type">XGBoostModel</span> ={
+   <span class="hljs-keyword">val</span> model_name_hadoop = model_name + <span class="hljs-string">&quot;_hadoop&quot;</span>
+   <span class="hljs-keyword">val</span> sc = spark.sparkContext
+   <span class="hljs-keyword">val</span> xgboostModel = <span class="hljs-type">XGBoost</span>.loadModelFromHadoopFile(model_name_hadoop)(sc)
+   <span class="hljs-keyword">return</span>  xgboostModel
  }
 
 
- /**
+ <span class="hljs-comment">/**
    * &#x4ECE;python&#x7248;&#x672C;&#x8BAD;&#x7EC3;&#x7684;&#x6A21;&#x578B;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x6A21;&#x578B;&#x5BF9;&#x8C61;
    * @param spark
    * @param model_name
    * @return
-   */
- def loadModel(spark:SparkSession,model_name:String): XGBoostClassificationModel ={
-   val xgboostModel = new XGBoostClassificationModel(SXGBoost.loadModel(model_name))
-   return xgboostModel
+   */</span>
+ <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">loadModel</span></span>(spark:<span class="hljs-type">SparkSession</span>,model_name:<span class="hljs-type">String</span>): <span class="hljs-type">XGBoostClassificationModel</span> ={
+   <span class="hljs-keyword">val</span> xgboostModel = <span class="hljs-keyword">new</span> <span class="hljs-type">XGBoostClassificationModel</span>(<span class="hljs-type">SXGBoost</span>.loadModel(model_name))
+   <span class="hljs-keyword">return</span> xgboostModel
 
  }
-</code></pre> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+</code></pre>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
                             
@@ -673,7 +681,7 @@ import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"xgboost参数和原理","level":"4.1","depth":1,"next":{"title":"topic_word_embedings论文解读和实现","level":"5.1","depth":1,"path":"自然语言处理/topic_word_embedings模型和实现.md","ref":"自然语言处理/topic_word_embedings模型和实现.md","articles":[]},"previous":{"title":"学习链接备用点","level":"3.5","depth":1,"path":"工程工具/学习链接备用点.md","ref":"工程工具/学习链接备用点.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"机器学习/xgboost参数和原理.md","mtime":"2018-01-05T06:25:14.966Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T02:41:52.764Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"xgboost参数和原理","level":"4.1","depth":1,"next":{"title":"topic_word_embedings论文解读和实现","level":"5.1","depth":1,"path":"自然语言处理/topic_word_embedings模型和实现.md","ref":"自然语言处理/topic_word_embedings模型和实现.md","articles":[]},"previous":{"title":"学习链接备用点","level":"3.5","depth":1,"path":"工程工具/学习链接备用点.md","ref":"工程工具/学习链接备用点.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"机器学习/xgboost参数和原理.md","mtime":"2018-01-30T03:24:21.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T03:22:51.693Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

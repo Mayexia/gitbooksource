@@ -16,7 +16,7 @@ plb.show()
 ```
 
 
-![png](./images/paper01/output_2_0.png)
+![png](output_2_0.png)
 
 
 ## pyplot库画图
@@ -114,7 +114,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_11_0.png)
+![png](output_11_0.png)
 
 
 ## 散点图
@@ -137,7 +137,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_13_0.png)
+![png](output_13_0.png)
 
 
 ## 条形图
@@ -163,7 +163,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_15_0.png)
+![png](output_15_0.png)
 
 
 ## 等高线图
@@ -186,7 +186,7 @@ C = plt.contour(X, Y, f(X,Y), 8, colors='black', linewidth=0.5)
 plt.show()
 ```
 
-![png](./images/paper01/output_17_1.png)
+![png](output_17_1.png)
 
 
 ## 灰度图（Imshow）
@@ -206,7 +206,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_19_0.png)
+![png](output_19_0.png)
 
 
 ## 饼状图
@@ -223,7 +223,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_21_0.png)
+![png](output_21_0.png)
 
 
 ## 量场图（Quiver Plots）
@@ -240,7 +240,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_23_0.png)
+![png](output_23_0.png)
 
 
 ## 网格
@@ -258,7 +258,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_25_0.png)
+![png](output_25_0.png)
 
 
 ## 多重网络
@@ -296,7 +296,7 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_27_0.png)
+![png](output_27_0.png)
 
 
 ## 3D图
@@ -320,4 +320,4 @@ plt.show()
 ```
 
 
-![png](./images/paper01/output_29_0.png)
+![png](output_29_0.png)

@@ -3,7 +3,7 @@
 本书籍主要为个人平时个人学习的笔记记录，部分文章会发布到本人博客中去，[博客地址](https://starmaye.github.io)
 
 ## 数据分析
-* [matplotlib基本绘图示例](数据分析/matplotlib基本绘图示例.md)
+* [matplotlib基本绘图示例](数据分析/matplotlib绘图示例/matplotlib基本绘图示例.md)
 
 ## 工程工具
 * [git链接多个账号](工程工具/git连接多个账号.md)

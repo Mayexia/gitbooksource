@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=添加内容
+comment=将数据分析修改为代码示例
 cur_path=$PWD
 echo ${cur_path}
 git add .

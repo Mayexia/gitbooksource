@@ -5,15 +5,15 @@
 
 ```python
 sklearn.cluster.KMeans(n_clusters=8,
-     init='k-means++', 
-    n_init=10, 
-    max_iter=300, 
-    tol=0.0001, 
-    precompute_distances='auto', 
-    verbose=0, 
-    random_state=None, 
-    copy_x=True, 
-    n_jobs=1, 
+     init='k-means++',
+    n_init=10,
+    max_iter=300,
+    tol=0.0001,
+    precompute_distances='auto',
+    verbose=0,
+    random_state=None,
+    copy_x=True,
+    n_jobs=1,
     algorithm='auto'
     )
 ```
@@ -135,12 +135,12 @@ plt.show()
 AgglomerativeClustering是scikit-learn提供的层级聚类算法模型，其原型为：
 ```python
 class sklearn.cluster.AgglomerativeClustering(
-    n_clusters=2, 
+    n_clusters=2,
     affinity=’euclidean’,
-    memory=None, 
-    connectivity=None, 
-    compute_full_tree=’auto’, 
-    linkage=’ward’, 
+    memory=None,
+    connectivity=None,
+    compute_full_tree=’auto’,
+    linkage=’ward’,
     pooling_func=<function mean>)
 
 ```
@@ -153,7 +153,7 @@ class sklearn.cluster.AgglomerativeClustering(
 - memory：用于缓存输出的结果，默认为不缓存
 - n_components：在 v-0.18中移除
 - compute_full_tree：通常当训练了n_clusters后，训练过程就会停止，但是如果compute_full_tree=True，则会继续训练从而生成一颗完整的树
-- linkage：一个字符串，用于指定链接算法 
+- linkage：一个字符串，用于指定链接算法
 - ‘ward’：单链接single-linkage，采用dmin
 - ‘complete’：全链接complete-linkage算法，采用dmax
 - ‘average’：均连接average-linkage算法，采用davg
@@ -178,12 +178,12 @@ import numpy as np
 from scipy import ndimage   
 from matplotlib import pyplot as plt   
 from sklearn import manifold, datasets   
-  
+
 digits = datasets.load_digits(n_class = 10)  
 X = digits.data   
 y = digits.target   
 n_samples, n_features = X.shape   
-  
+
 np.random.seed(0)  
 def nudge_image(X, y):  
     shift = lambda x: ndimage.shift(x.reshape((8, 8)), .3 * np.random.normal(size = 2),  
@@ -191,38 +191,38 @@ def nudge_image(X, y):
     X = np.concatenate([X, np.apply_along_axis(shift, 1, X)])  
     Y = np.concatenate([y, y], axis = 0)  
     return X, Y   
-  
+
 X, y = nudge_image(X, y)  
-  
+
 def plot_clustering(X_red, labels, title = None):  
     x_min, x_max = np.min(X_red, axis = 0), np.max(X_red, axis = 0)  
     X_red = (X_red - x_min) / (x_max - x_min)  
-  
+
     plt.figure(figsize = (6, 4))  
     for i in range(X_red.shape[0]):
         plt.text(X_red[i,0], X_red[i,1], str(y[i]), color = plt.cm.spectral(labels[i]/10.),  
         fontdict = {'weight': 'bold', 'size': 9})  
-  
+
     plt.xticks([])  
     plt.yticks([])  
     if title is not None:  
         plt.title(title, size = 17)  
     plt.axis('off')  
     plt.tight_layout()  
-  
-print("Computing embedding" ) 
+
+print("Computing embedding" )
 X_red = manifold.SpectralEmbedding(n_components = 2).fit_transform(X)  
 print("Done!")
-  
+
 from sklearn.cluster import AgglomerativeClustering   
-  
+
 for linkage in ('ward', 'average', 'complete'):  
  clustering = AgglomerativeClustering(linkage = linkage, n_clusters = 10)  
  t0 = time()  
  clustering.fit(X_red)  
  print("%s : %.2fs" % (linkage, time() - t0))
  plot_clustering(X_red, X, clustering.labels_, "%s linkage" % linkage)  
-  
+
 plt.show()
 ```
 
@@ -284,9 +284,9 @@ print(vecs_matrix.shape)
 
 
 ```python
-from sklearn.cluster import AgglomerativeClustering 
+from sklearn.cluster import AgglomerativeClustering
 linkages=['ward','complete','average']
-clustering = AgglomerativeClustering(linkage="ward",n_clusters = 120) 
+clustering = AgglomerativeClustering(linkage="ward",n_clusters = 120)
 clustering.fit(vecs_matrix)
 predicted_lables=clustering.fit_predict(vecs_matrix)
 print(len(predicted_lables))
@@ -295,7 +295,7 @@ print(len(predicted_lables))
     1693
 
 
-## 写入文件
+### 写入文件
 
 
 ```python
@@ -326,12 +326,12 @@ plt.show()
 def plot_clustering(X_red, labels, title = None):  
     x_min, x_max = np.min(X_red, axis = 0), np.max(X_red, axis = 0)  
     X_red = (X_red - x_min) / (x_max - x_min)  
-  
+
     plt.figure(figsize = (6, 4))  
     for i in range(X_red.shape[0]):
         plt.text(X_red[i,0], X_red[i,1], str(labels[i]),color = plt.cm.spectral(labels[i]/10.),  
         fontdict = {'weight': 'bold', 'size': 9})  
-  
+
     plt.xticks([])  
     plt.yticks([])  
     if title is not None:  
@@ -387,4 +387,3 @@ plt.show()
 
 
 ![png](output_40_0.png)
-

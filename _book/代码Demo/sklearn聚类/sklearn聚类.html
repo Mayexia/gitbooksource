@@ -1,0 +1,925 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>sklearn聚类demo · Maye的个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xiachi">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../gitbook_files/introduction.html" />
+    
+    
+    <link rel="prev" href="../matplotlib绘图示例/matplotlib基本绘图示例.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://starmaye.github.io" target="_blank" class="custom-link">Maye的个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工程工具</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../工程工具/git连接多个账号.html">
+            
+                <a href="../../工程工具/git连接多个账号.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    git链接多个账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../工程工具/git学习代码.html">
+            
+                <a href="../../工程工具/git学习代码.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    git学习代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../工程工具/spark学习笔记.html">
+            
+                <a href="../../工程工具/spark学习笔记.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    spark学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../工程工具/jupyter安装目录工具.html">
+            
+                <a href="../../工程工具/jupyter安装目录工具.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    jupyter带目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../工程工具/学习链接备用点.html">
+            
+                <a href="../../工程工具/学习链接备用点.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    学习链接备用点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">机器学习</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../机器学习/xgboost参数和原理.html">
+            
+                <a href="../../机器学习/xgboost参数和原理.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    xgboost参数和原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">自然语言处理</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                <a href="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    topic_word_embedings论文解读和实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">代码示例</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                <a href="../matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    matplotlib基本绘图示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="sklearn聚类.html">
+            
+                <a href="sklearn聚类.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    sklearn聚类demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">gitbook的基本使用</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../gitbook_files/introduction.html">
+            
+                <a href="../../gitbook_files/introduction.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../gitbook_files/installation.html">
+            
+                <a href="../../gitbook_files/installation.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../gitbook_files/commands.html">
+            
+                <a href="../../gitbook_files/commands.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../gitbook_files/structure.html">
+            
+                <a href="../../gitbook_files/structure.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../gitbook_files/settings.html">
+            
+                <a href="../../gitbook_files/settings.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../gitbook_files/plugins.html">
+            
+                <a href="../../gitbook_files/plugins.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../gitbook_files/themes.html">
+            
+                <a href="../../gitbook_files/themes.html">
+            
+                    
+                        <b>6.7.</b>
+                    
+                    主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../gitbook_files/bookjson.md">
+            
+                <span>
+            
+                    
+                        <b>6.8.</b>
+                    
+                    bookjson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >sklearn聚类demo</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#k-means&#x805A;&#x7C7B;">K-means&#x805A;&#x7C7B;</a></li><ul><li><a href="#k-means&#x53C2;&#x6570;&#x8BF4;&#x660E;">K-means&#x53C2;&#x6570;&#x8BF4;&#x660E;</a></li><li><a href="#&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</a></li><ul><li><a href="#&#x83B7;&#x53D6;&#x6570;&#x636E;">&#x83B7;&#x53D6;&#x6570;&#x636E;</a></li><li><a href="#&#x805A;&#x7C7B;&#x4E2A;&#x6570;&#x548C;inertia&#x7684;&#x5173;&#x7CFB;">&#x805A;&#x7C7B;&#x4E2A;&#x6570;&#x548C;inertia&#x7684;&#x5173;&#x7CFB;</a></li><li><a href="#&#x6307;&#x5B9A;&#x7C07;&#x4E2A;&#x6570;&#x8BAD;&#x7EC3;">&#x6307;&#x5B9A;&#x7C07;&#x4E2A;&#x6570;&#x8BAD;&#x7EC3;</a></li></ul><li><a href="#&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;">&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;</a></li></ul><li><a href="#&#x5C42;&#x6B21;&#x805A;&#x7C7B;">&#x5C42;&#x6B21;&#x805A;&#x7C7B;</a></li><ul><li><a href="#&#x7B97;&#x6CD5;&#x8BF4;&#x660E;">&#x7B97;&#x6CD5;&#x8BF4;&#x660E;</a></li><ul><li><a href="#&#x53C2;&#x6570;">&#x53C2;&#x6570;</a></li><li><a href="#&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</a></li><li><a href="#&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</a></li></ul><li><a href="#&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</a></li><li><a href="#&#x8D26;&#x5355;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C42;&#x6B21;&#x805A;&#x7C7B;">&#x8D26;&#x5355;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C42;&#x6B21;&#x805A;&#x7C7B;</a></li><ul><li><a href="#&#x6570;&#x636E;&#x52A0;&#x8F7D;">&#x6570;&#x636E;&#x52A0;&#x8F7D;</a></li><li><a href="#&#x5F00;&#x59CB;&#x805A;&#x7C7B;">&#x5F00;&#x59CB;&#x805A;&#x7C7B;</a></li></ul><li><a href="#&#x5199;&#x5165;&#x6587;&#x4EF6;">&#x5199;&#x5165;&#x6587;&#x4EF6;</a></li><ul><li><a href="#&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;">&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;</a></li></ul><li><a href="#dbscan&#x805A;&#x7C7B;">DBSCAN&#x805A;&#x7C7B;</a></li><ul><li><a href="#&#x805A;&#x7C7B;">&#x805A;&#x7C7B;</a></li><li><a href="#&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;">&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;</a></li></ul></ul></ul></div><a href="#k-means&#x805A;&#x7C7B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="k-means&#x805A;&#x7C7B;"><a name="k-means&#x805A;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#k-means&#x805A;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>K-means&#x805A;&#x7C7B;</h1>
+<h2 id="k-means&#x53C2;&#x6570;&#x8BF4;&#x660E;"><a name="k-means&#x53C2;&#x6570;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#k-means&#x53C2;&#x6570;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>K-means&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
+<pre><code class="lang-python">sklearn.cluster.KMeans(n_clusters=<span class="hljs-number">8</span>,
+     init=<span class="hljs-string">&apos;k-means++&apos;</span>, 
+    n_init=<span class="hljs-number">10</span>, 
+    max_iter=<span class="hljs-number">300</span>, 
+    tol=<span class="hljs-number">0.0001</span>, 
+    precompute_distances=<span class="hljs-string">&apos;auto&apos;</span>, 
+    verbose=<span class="hljs-number">0</span>, 
+    random_state=<span class="hljs-keyword">None</span>, 
+    copy_x=<span class="hljs-keyword">True</span>, 
+    n_jobs=<span class="hljs-number">1</span>, 
+    algorithm=<span class="hljs-string">&apos;auto&apos;</span>
+    )
+</code></pre>
+<p>&#x53C2;&#x6570;&#x7684;&#x610F;&#x4E49;&#xFF1A;</p>
+<ul>
+<li>n_clusters:&#x7C07;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x5373;&#x4F60;&#x60F3;&#x805A;&#x6210;&#x51E0;&#x7C7B;</li>
+<li>init: &#x521D;&#x59CB;&#x7C07;&#x4E2D;&#x5FC3;&#x7684;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;</li>
+<li>n_init: &#x83B7;&#x53D6;&#x521D;&#x59CB;&#x7C07;&#x4E2D;&#x5FC3;&#x7684;&#x66F4;&#x8FED;&#x6B21;&#x6570;&#xFF0C;&#x4E3A;&#x4E86;&#x5F25;&#x8865;&#x521D;&#x59CB;&#x8D28;&#x5FC3;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x7B97;&#x6CD5;&#x9ED8;&#x8BA4;&#x4F1A;&#x521D;&#x59CB;10&#x4E2A;&#x8D28;&#x5FC3;&#xFF0C;&#x5B9E;&#x73B0;&#x7B97;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x6700;&#x597D;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+<li>max_iter: &#x6700;&#x5927;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#xFF08;&#x56E0;&#x4E3A;kmeans&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x8FED;&#x4EE3;&#xFF09;</li>
+<li>tol: &#x5BB9;&#x5FCD;&#x5EA6;&#xFF0C;&#x5373;kmeans&#x8FD0;&#x884C;&#x51C6;&#x5219;&#x6536;&#x655B;&#x7684;&#x6761;&#x4EF6;</li>
+<li>precompute_distances&#xFF1A;&#x662F;&#x5426;&#x9700;&#x8981;&#x63D0;&#x524D;&#x8BA1;&#x7B97;&#x8DDD;&#x79BB;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4F1A;&#x5728;&#x7A7A;&#x95F4;&#x548C;&#x65F6;&#x95F4;&#x4E4B;&#x95F4;&#x505A;&#x6743;&#x8861;&#xFF0C;&#x5982;&#x679C;&#x662F;True &#x4F1A;&#x628A;&#x6574;&#x4E2A;&#x8DDD;&#x79BB;&#x77E9;&#x9635;&#x90FD;&#x653E;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;auto &#x4F1A;&#x9ED8;&#x8BA4;&#x5728;&#x6570;&#x636E;&#x6837;&#x672C;&#x5927;&#x4E8E;featurs*samples &#x7684;&#x6570;&#x91CF;&#x5927;&#x4E8E;12e6 &#x7684;&#x65F6;&#x5019;False,False &#x65F6;&#x6838;&#x5FC3;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5229;&#x7528;Cpython &#x6765;&#x5B9E;&#x73B0;&#x7684;</li>
+<li>verbose: &#x5197;&#x957F;&#x6A21;&#x5F0F;&#xFF08;&#x4E0D;&#x592A;&#x61C2;&#x662F;&#x5565;&#x610F;&#x601D;&#xFF0C;&#x53CD;&#x6B63;&#x4E00;&#x822C;&#x4E0D;&#x53BB;&#x6539;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;</li>
+<li>random_state: &#x968F;&#x673A;&#x751F;&#x6210;&#x7C07;&#x4E2D;&#x5FC3;&#x7684;&#x72B6;&#x6001;&#x6761;&#x4EF6;&#x3002;</li>
+<li>copy_x: &#x5BF9;&#x662F;&#x5426;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7684;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#xFF0C;&#x5982;&#x679C;True&#xFF0C;&#x5373;&#x590D;&#x5236;&#x4E86;&#x5C31;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x3002;bool &#x5728;scikit-learn &#x5F88;&#x591A;&#x63A5;&#x53E3;&#x4E2D;&#x90FD;&#x4F1A;&#x6709;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x662F;&#x5426;&#x5BF9;&#x8F93;&#x5165;&#x6570;&#x636E;&#x7EE7;&#x7EED;copy &#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0D;&#x4FEE;&#x6539;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E2A;&#x8981;&#x7406;&#x89E3;Python &#x7684;&#x5185;&#x5B58;&#x673A;&#x5236;&#x624D;&#x4F1A;&#x6BD4;&#x8F83;&#x6E05;&#x695A;&#x3002;</li>
+<li>n_jobs: &#x5E76;&#x884C;&#x8BBE;&#x7F6E;</li>
+<li>algorithm: kmeans&#x7684;&#x5B9E;&#x73B0;&#x7B97;&#x6CD5;&#xFF0C;&#x6709;&#xFF1A;&#x2019;auto&#x2019;, &#x2018;full&#x2019;, &#x2018;elkan&#x2019;, &#x5176;&#x4E2D; &#x2018;full&#x2019;&#x8868;&#x793A;&#x7528;EM&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;</li>
+</ul>
+<p>&#x867D;&#x7136;&#x6709;&#x5F88;&#x591A;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x90FD;&#x5DF2;&#x7ECF;&#x7ED9;&#x51FA;&#x4E86;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x4F20;&#x5165;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;,&#x53C2;&#x6570;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x9700;&#x8981;&#x6765;&#x8C03;&#x7528;&#x3002;</p>
+<h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x6570;&#x636E;"><a name="&#x83B7;&#x53D6;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x6570;&#x636E;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_datalist</span><span class="hljs-params">(file_path)</span>:</span>
+    vecs_list=[]
+    word_list = []
+    <span class="hljs-keyword">with</span> open(file_path,<span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file:
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> file:
+            line_split=line.replace(<span class="hljs-string">&quot;\n&quot;</span>,<span class="hljs-string">&quot;&quot;</span>).strip().split(<span class="hljs-string">&quot; &quot;</span>)
+            word = line_split[<span class="hljs-number">0</span>]
+            vec_list = [float(data) <span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> line_split[<span class="hljs-number">1</span>:]]
+            word_list.append(word)
+            vecs_list.append(vec_list)       
+    <span class="hljs-keyword">return</span> word_list,vecs_list
+</code></pre>
+<pre><code class="lang-python">file_path = <span class="hljs-string">&quot;/Users/xiachi/PycharmProjects/credit_card/test/ls/domain_word.vec&quot;</span>
+word_list,vecs_list = get_datalist(file_path)
+vecs_matrix = np.matrix(vecs_list)
+print(vecs_matrix.shape)
+</code></pre>
+<pre><code>(1693, 200)
+</code></pre><h3 id="&#x805A;&#x7C7B;&#x4E2A;&#x6570;&#x548C;inertia&#x7684;&#x5173;&#x7CFB;"><a name="&#x805A;&#x7C7B;&#x4E2A;&#x6570;&#x548C;inertia&#x7684;&#x5173;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x7C7B;&#x4E2A;&#x6570;&#x548C;inertia&#x7684;&#x5173;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x805A;&#x7C7B;&#x4E2A;&#x6570;&#x548C;inertia&#x7684;&#x5173;&#x7CFB;</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># print(&quot;&#x5F00;&#x59CB;&#x8BAD;&#x7EC3;....&quot;)</span>
+<span class="hljs-comment"># for num in range(20,100):</span>
+<span class="hljs-comment"># #     num_clusters = 30</span>
+<span class="hljs-comment">#     km = KMeans(n_clusters=num,algorithm=&quot;full&quot;,max_iter=600)</span>
+<span class="hljs-comment">#     km.fit(vecs_matrix)</span>
+<span class="hljs-comment">#     inertia = km.inertia_ # &#x83B7;&#x53D6;&#x805A;&#x7C7B;&#x51C6;&#x5219;&#x7684;&#x603B;&#x548C;</span>
+<span class="hljs-comment">#     print(&quot;&#x805A;&#x7C7B;&#x4E2A;&#x6570;:%s,inertia&#x503C;&#x4E3A;:%s:&quot;%(str(num),str(inertia)))</span>
+<span class="hljs-comment"># print(&quot;&#x8BAD;&#x7EC3;&#x7ED3;&#x675F;&#xFF01;&quot;)</span>
+</code></pre>
+<h3 id="&#x6307;&#x5B9A;&#x7C07;&#x4E2A;&#x6570;&#x8BAD;&#x7EC3;"><a name="&#x6307;&#x5B9A;&#x7C07;&#x4E2A;&#x6570;&#x8BAD;&#x7EC3;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x5B9A;&#x7C07;&#x4E2A;&#x6570;&#x8BAD;&#x7EC3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x7C07;&#x4E2A;&#x6570;&#x8BAD;&#x7EC3;</h3>
+<pre><code class="lang-python">num_clusters = <span class="hljs-number">70</span>
+km = KMeans(n_clusters=num_clusters,algorithm=<span class="hljs-string">&quot;full&quot;</span>,max_iter=<span class="hljs-number">600</span>)
+km.fit(vecs_matrix)
+label_pred = km.labels_ <span class="hljs-comment">#&#x83B7;&#x53D6;&#x805A;&#x7C7B;&#x6807;&#x7B7E;</span>
+centroids = km.cluster_centers_ <span class="hljs-comment">#&#x83B7;&#x53D6;&#x805A;&#x7C7B;&#x4E2D;&#x5FC3;</span>
+inertia = km.inertia_ <span class="hljs-comment"># &#x83B7;&#x53D6;&#x805A;&#x7C7B;&#x51C6;&#x5219;&#x7684;&#x603B;&#x548C;</span>
+ziped_list = zip(word_list,list(label_pred))
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;result.txt&quot;</span>,<span class="hljs-string">&quot;w+&quot;</span>) <span class="hljs-keyword">as</span> file:
+    <span class="hljs-keyword">for</span> (word,label) <span class="hljs-keyword">in</span> ziped_list:
+        wtr_str = str(word)+<span class="hljs-string">&quot;\t&quot;</span>+str(label)+<span class="hljs-string">&quot;\n&quot;</span>
+        file.write(wtr_str)
+</code></pre>
+<h2 id="&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;"><a name="&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.manifold <span class="hljs-keyword">import</span> TSNE
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</code></pre>
+<pre><code class="lang-python">tsne=TSNE()
+X_Y = tsne.fit_transform(vecs_matrix)  <span class="hljs-comment">#&#x8FDB;&#x884C;&#x6570;&#x636E;&#x964D;&#x7EF4;,&#x964D;&#x6210;&#x4E24;&#x7EF4;</span>
+</code></pre>
+<pre><code class="lang-python">plt.scatter(X_Y[:, <span class="hljs-number">0</span>], X_Y[:, <span class="hljs-number">1</span>],c=label_pred)
+plt.show()
+</code></pre>
+<p><img src="output_17_0.png" alt="png"></p>
+<h1 id="&#x5C42;&#x6B21;&#x805A;&#x7C7B;"><a name="&#x5C42;&#x6B21;&#x805A;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x5C42;&#x6B21;&#x805A;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C42;&#x6B21;&#x805A;&#x7C7B;</h1>
+<h2 id="&#x7B97;&#x6CD5;&#x8BF4;&#x660E;"><a name="&#x7B97;&#x6CD5;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x7B97;&#x6CD5;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B97;&#x6CD5;&#x8BF4;&#x660E;</h2>
+<p>AgglomerativeClustering&#x662F;scikit-learn&#x63D0;&#x4F9B;&#x7684;&#x5C42;&#x7EA7;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x6A21;&#x578B;&#xFF0C;&#x5176;&#x539F;&#x578B;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-python">class sklearn.cluster.AgglomerativeClustering(
+    n_clusters=2, 
+    affinity=&#x2019;euclidean&#x2019;,
+    memory=None, 
+    connectivity=None, 
+    compute_full_tree=&#x2019;auto&#x2019;, 
+    linkage=&#x2019;ward&#x2019;, 
+    pooling_func=&lt;function mean&gt;)
+</code></pre>
+<h3 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h3>
+<ul>
+<li>n_clusters&#xFF1A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x5206;&#x7C7B;&#x7C07;&#x7684;&#x6570;&#x91CF;</li>
+<li>connectivity&#xFF1A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x53EF;&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x6216;&#x8005;None&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x77E9;&#x9635;</li>
+<li>affinity&#xFF1A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x53EF;&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x8DDD;&#x79BB;&#x3002;&#x53EF;&#x4EE5;&#x4E3A;&#xFF1A;&#x2019;euclidean&#x2019;&#xFF0C;&#x2019;l1&#x2019;&#xFF0C;&#x2019;l2&#x2019;&#xFF0C;&#x2019;mantattan&#x2019;&#xFF0C;&#x2019;cosine&#x2019;&#xFF0C;&#x2019;precomputed&#x2019;&#xFF0C;&#x5982;&#x679C;linkage=&#x2019;ward&#x2019;&#xFF0C;&#x5219;affinity&#x5FC5;&#x987B;&#x4E3A;&#x2019;euclidean&#x2019;</li>
+<li>memory&#xFF1A;&#x7528;&#x4E8E;&#x7F13;&#x5B58;&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x4E0D;&#x7F13;&#x5B58;</li>
+<li>n_components&#xFF1A;&#x5728; v-0.18&#x4E2D;&#x79FB;&#x9664;</li>
+<li>compute_full_tree&#xFF1A;&#x901A;&#x5E38;&#x5F53;&#x8BAD;&#x7EC3;&#x4E86;n_clusters&#x540E;&#xFF0C;&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x5C31;&#x4F1A;&#x505C;&#x6B62;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;compute_full_tree=True&#xFF0C;&#x5219;&#x4F1A;&#x7EE7;&#x7EED;&#x8BAD;&#x7EC3;&#x4ECE;&#x800C;&#x751F;&#x6210;&#x4E00;&#x9897;&#x5B8C;&#x6574;&#x7684;&#x6811;</li>
+<li>linkage&#xFF1A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x94FE;&#x63A5;&#x7B97;&#x6CD5; </li>
+<li>&#x2018;ward&#x2019;&#xFF1A;&#x5355;&#x94FE;&#x63A5;single-linkage&#xFF0C;&#x91C7;&#x7528;dmin</li>
+<li>&#x2018;complete&#x2019;&#xFF1A;&#x5168;&#x94FE;&#x63A5;complete-linkage&#x7B97;&#x6CD5;&#xFF0C;&#x91C7;&#x7528;dmax</li>
+<li>&#x2018;average&#x2019;&#xFF1A;&#x5747;&#x8FDE;&#x63A5;average-linkage&#x7B97;&#x6CD5;&#xFF0C;&#x91C7;&#x7528;davg</li>
+<li>pooling_func&#xFF1A;&#x4E00;&#x4E2A;&#x53EF;&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7684;&#x8F93;&#x5165;&#x662F;&#x4E00;&#x7EC4;&#x7279;&#x5F81;&#x7684;&#x503C;&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x4E00;&#x4E2A;&#x6570;</li>
+</ul>
+<h3 id="&#x5C5E;&#x6027;"><a name="&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;</h3>
+<ul>
+<li>labels&#xFF1A;&#x6BCF;&#x4E2A;&#x6837;&#x672C;&#x7684;&#x7C07;&#x6807;&#x8BB0;</li>
+<li>n<em>leaves</em>&#xFF1A;&#x5206;&#x5C42;&#x6811;&#x7684;&#x53F6;&#x8282;&#x70B9;&#x6570;&#x91CF;</li>
+<li>n_components&#xFF1A;&#x8FDE;&#x63A5;&#x56FE;&#x4E2D;&#x8FDE;&#x901A;&#x5206;&#x91CF;&#x7684;&#x4F30;&#x8BA1;&#x503C;</li>
+<li>children&#xFF1A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x7ED9;&#x51FA;&#x4E86;&#x6BCF;&#x4E2A;&#x975E;&#x8282;&#x70B9;&#x6570;&#x91CF;</li>
+</ul>
+<h3 id="&#x65B9;&#x6CD5;"><a name="&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;</h3>
+<ul>
+<li>fit(X[,y])&#xFF1A;&#x8BAD;&#x7EC3;&#x6837;&#x672C;</li>
+<li>fit_predict(X[,y])&#xFF1A;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#x5E76;&#x9884;&#x6D4B;&#x6BCF;&#x4E2A;&#x6837;&#x672C;&#x7684;&#x7C07;&#x6807;&#x8BB0;</li>
+</ul>
+<h2 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;"><a name="&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> time   
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np   
+<span class="hljs-keyword">from</span> scipy <span class="hljs-keyword">import</span> ndimage   
+<span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt   
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> manifold, datasets   
+
+digits = datasets.load_digits(n_class = <span class="hljs-number">10</span>)  
+X = digits.data   
+y = digits.target   
+n_samples, n_features = X.shape   
+
+np.random.seed(<span class="hljs-number">0</span>)  
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">nudge_image</span><span class="hljs-params">(X, y)</span>:</span>  
+    shift = <span class="hljs-keyword">lambda</span> x: ndimage.shift(x.reshape((<span class="hljs-number">8</span>, <span class="hljs-number">8</span>)), <span class="hljs-number">.3</span> * np.random.normal(size = <span class="hljs-number">2</span>),  
+         mode = <span class="hljs-string">&apos;constant&apos;</span>).ravel()   
+    X = np.concatenate([X, np.apply_along_axis(shift, <span class="hljs-number">1</span>, X)])  
+    Y = np.concatenate([y, y], axis = <span class="hljs-number">0</span>)  
+    <span class="hljs-keyword">return</span> X, Y   
+
+X, y = nudge_image(X, y)  
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plot_clustering</span><span class="hljs-params">(X_red, labels, title = None)</span>:</span>  
+    x_min, x_max = np.min(X_red, axis = <span class="hljs-number">0</span>), np.max(X_red, axis = <span class="hljs-number">0</span>)  
+    X_red = (X_red - x_min) / (x_max - x_min)  
+
+    plt.figure(figsize = (<span class="hljs-number">6</span>, <span class="hljs-number">4</span>))  
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X_red.shape[<span class="hljs-number">0</span>]):
+        plt.text(X_red[i,<span class="hljs-number">0</span>], X_red[i,<span class="hljs-number">1</span>], str(y[i]), color = plt.cm.spectral(labels[i]/<span class="hljs-number">10.</span>),  
+        fontdict = {<span class="hljs-string">&apos;weight&apos;</span>: <span class="hljs-string">&apos;bold&apos;</span>, <span class="hljs-string">&apos;size&apos;</span>: <span class="hljs-number">9</span>})  
+
+    plt.xticks([])  
+    plt.yticks([])  
+    <span class="hljs-keyword">if</span> title <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:  
+        plt.title(title, size = <span class="hljs-number">17</span>)  
+    plt.axis(<span class="hljs-string">&apos;off&apos;</span>)  
+    plt.tight_layout()  
+
+print(<span class="hljs-string">&quot;Computing embedding&quot;</span> ) 
+X_red = manifold.SpectralEmbedding(n_components = <span class="hljs-number">2</span>).fit_transform(X)  
+print(<span class="hljs-string">&quot;Done!&quot;</span>)
+
+<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> AgglomerativeClustering   
+
+<span class="hljs-keyword">for</span> linkage <span class="hljs-keyword">in</span> (<span class="hljs-string">&apos;ward&apos;</span>, <span class="hljs-string">&apos;average&apos;</span>, <span class="hljs-string">&apos;complete&apos;</span>):  
+ clustering = AgglomerativeClustering(linkage = linkage, n_clusters = <span class="hljs-number">10</span>)  
+ t0 = time()  
+ clustering.fit(X_red)  
+ print(<span class="hljs-string">&quot;%s : %.2fs&quot;</span> % (linkage, time() - t0))
+ plot_clustering(X_red, X, clustering.labels_, <span class="hljs-string">&quot;%s linkage&quot;</span> % linkage)  
+
+plt.show()
+</code></pre>
+<pre><code>Computing embedding
+Done!
+ward : 0.29s
+average : 0.27s
+complete : 0.24s
+</code></pre><p><img src="output_22_1.png" alt="png"></p>
+<p><img src="output_22_2.png" alt="png"></p>
+<p><img src="output_22_3.png" alt="png"></p>
+<h2 id="&#x8D26;&#x5355;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C42;&#x6B21;&#x805A;&#x7C7B;"><a name="&#x8D26;&#x5355;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C42;&#x6B21;&#x805A;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x8D26;&#x5355;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C42;&#x6B21;&#x805A;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D26;&#x5355;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C42;&#x6B21;&#x805A;&#x7C7B;</h2>
+<h3 id="&#x6570;&#x636E;&#x52A0;&#x8F7D;"><a name="&#x6570;&#x636E;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x52A0;&#x8F7D;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_datalist</span><span class="hljs-params">(file_path)</span>:</span>
+    vecs_list=[]
+    word_list = []
+    <span class="hljs-keyword">with</span> open(file_path,<span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file:
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> file:
+            line_split=line.replace(<span class="hljs-string">&quot;\n&quot;</span>,<span class="hljs-string">&quot;&quot;</span>).strip().split(<span class="hljs-string">&quot; &quot;</span>)
+            word = line_split[<span class="hljs-number">0</span>]
+            vec_list = [float(data) <span class="hljs-keyword">for</span> data <span class="hljs-keyword">in</span> line_split[<span class="hljs-number">1</span>:]]
+            word_list.append(word)
+            vecs_list.append(vec_list)       
+    <span class="hljs-keyword">return</span> word_list,vecs_list
+</code></pre>
+<pre><code class="lang-python">file_path = <span class="hljs-string">&quot;/Users/xiachi/PycharmProjects/credit_card/test/ls/domain_word.vec&quot;</span>
+word_list,vecs_list = get_datalist(file_path)
+vecs_matrix = np.matrix(vecs_list)
+print(vecs_matrix.shape)
+</code></pre>
+<pre><code>(1693, 200)
+</code></pre><h3 id="&#x5F00;&#x59CB;&#x805A;&#x7C7B;"><a name="&#x5F00;&#x59CB;&#x805A;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x59CB;&#x805A;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x59CB;&#x805A;&#x7C7B;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> AgglomerativeClustering 
+linkages=[<span class="hljs-string">&apos;ward&apos;</span>,<span class="hljs-string">&apos;complete&apos;</span>,<span class="hljs-string">&apos;average&apos;</span>]
+clustering = AgglomerativeClustering(linkage=<span class="hljs-string">&quot;ward&quot;</span>,n_clusters = <span class="hljs-number">120</span>) 
+clustering.fit(vecs_matrix)
+predicted_lables=clustering.fit_predict(vecs_matrix)
+print(len(predicted_lables))
+</code></pre>
+<pre><code>1693
+</code></pre><h2 id="&#x5199;&#x5165;&#x6587;&#x4EF6;"><a name="&#x5199;&#x5165;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x5165;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5199;&#x5165;&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">with</span> open(<span class="hljs-string">&quot;hi_result.txt&quot;</span>,<span class="hljs-string">&quot;w+&quot;</span>) <span class="hljs-keyword">as</span> file:
+    <span class="hljs-keyword">for</span> i,word <span class="hljs-keyword">in</span> enumerate(word_list):
+        wtr=word+<span class="hljs-string">&quot;\t&quot;</span>+str(list(predicted_lables)[i])
+        file.write(wtr+<span class="hljs-string">&quot;\n&quot;</span>)
+</code></pre>
+<h3 id="&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;"><a name="&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.manifold <span class="hljs-keyword">import</span> TSNE
+<span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt  
+tsne=TSNE()
+X_Y = tsne.fit_transform(vecs_matrix)  <span class="hljs-comment">#&#x8FDB;&#x884C;&#x6570;&#x636E;&#x964D;&#x7EF4;,&#x964D;&#x6210;&#x4E24;&#x7EF4;</span>
+plt.scatter(X_Y[:, <span class="hljs-number">0</span>], X_Y[:, <span class="hljs-number">1</span>],c=predicted_lables)
+plt.show()
+</code></pre>
+<p><img src="output_33_0.png" alt="png"></p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plot_clustering</span><span class="hljs-params">(X_red, labels, title = None)</span>:</span>  
+    x_min, x_max = np.min(X_red, axis = <span class="hljs-number">0</span>), np.max(X_red, axis = <span class="hljs-number">0</span>)  
+    X_red = (X_red - x_min) / (x_max - x_min)  
+
+    plt.figure(figsize = (<span class="hljs-number">6</span>, <span class="hljs-number">4</span>))  
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X_red.shape[<span class="hljs-number">0</span>]):
+        plt.text(X_red[i,<span class="hljs-number">0</span>], X_red[i,<span class="hljs-number">1</span>], str(labels[i]),color = plt.cm.spectral(labels[i]/<span class="hljs-number">10.</span>),  
+        fontdict = {<span class="hljs-string">&apos;weight&apos;</span>: <span class="hljs-string">&apos;bold&apos;</span>, <span class="hljs-string">&apos;size&apos;</span>: <span class="hljs-number">9</span>})  
+
+    plt.xticks([])  
+    plt.yticks([])  
+    <span class="hljs-keyword">if</span> title <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:  
+        plt.title(title, size = <span class="hljs-number">17</span>)  
+    plt.axis(<span class="hljs-string">&apos;off&apos;</span>)  
+    plt.tight_layout()
+</code></pre>
+<pre><code class="lang-python">plot_clustering(X_Y,predicted_lables,<span class="hljs-string">&quot;ward&quot;</span>)
+plt.show()
+</code></pre>
+<pre><code>&lt;matplotlib.figure.Figure at 0x10c036048&gt;
+
+
+
+&lt;matplotlib.figure.Figure at 0x10ce852b0&gt;
+</code></pre><p><img src="output_35_2.png" alt="png"></p>
+<h2 id="dbscan&#x805A;&#x7C7B;"><a name="dbscan&#x805A;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#dbscan&#x805A;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>DBSCAN&#x805A;&#x7C7B;</h2>
+<h3 id="&#x805A;&#x7C7B;"><a name="&#x805A;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x805A;&#x7C7B;</h3>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x6570;&#x636E;&#x5728;&#x5C42;&#x6B21;&#x805A;&#x7C7B;&#x4E2D;&#x52A0;&#x8F7D;&#x4E86;</span>
+<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> DBSCAN
+y_pred = DBSCAN(eps = <span class="hljs-number">0.4</span>, min_samples = <span class="hljs-number">10</span>).fit_predict(vecs_matrix)
+print(len(list(set(y_pred))))
+</code></pre>
+<pre><code>1
+</code></pre><h3 id="&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;"><a name="&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;&#x89C6;&#x5316;&#x805A;&#x7C7B;&#x7ED3;&#x679C;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.manifold <span class="hljs-keyword">import</span> TSNE
+<span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt  
+tsne=TSNE()
+X_Y = tsne.fit_transform(vecs_matrix)  <span class="hljs-comment">#&#x8FDB;&#x884C;&#x6570;&#x636E;&#x964D;&#x7EF4;,&#x964D;&#x6210;&#x4E24;&#x7EF4;</span>
+plt.scatter(X_Y[:, <span class="hljs-number">0</span>], X_Y[:, <span class="hljs-number">1</span>],c=y_pred)
+plt.show()
+</code></pre>
+<p><img src="output_40_0.png" alt="png"></p>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../matplotlib绘图示例/matplotlib基本绘图示例.html" class="navigation navigation-prev " aria-label="Previous page: matplotlib基本绘图示例">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../gitbook_files/introduction.html" class="navigation navigation-next " aria-label="Next page: 前言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sklearn聚类demo","level":"5.2","depth":1,"next":{"title":"前言","level":"6.1","depth":1,"path":"gitbook_files/introduction.md","ref":"gitbook_files/introduction.md","articles":[]},"previous":{"title":"matplotlib基本绘图示例","level":"5.1","depth":1,"path":"代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.md","ref":"代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"代码Demo/sklearn聚类/sklearn聚类.md","mtime":"2018-01-30T16:00:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-30T16:06:37.640Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

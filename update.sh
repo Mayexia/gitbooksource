@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=添加sklearn聚类代码示例
+comment=添加本书的源码链接地址
 cur_path=$PWD
 echo ${cur_path}
 git add .

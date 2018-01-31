@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=书本源码地址贴到summary中
+comment=sklearn博客的修改
 cur_path=$PWD
 echo ${cur_path}
 git add .

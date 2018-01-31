@@ -359,9 +359,9 @@ plt.show()
 ![png](output_35_2.png)
 
 
-## DBSCAN聚类
+# DBSCAN聚类
 
-### 聚类
+## 聚类
 
 
 ```python
@@ -374,7 +374,7 @@ print(len(list(set(y_pred))))
     1
 
 
-### 可视化聚类结果
+## 可视化聚类结果
 
 
 ```python

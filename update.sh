@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=添加本书的源码链接地址
+comment=书本源码地址贴到summary中
 cur_path=$PWD
 echo ${cur_path}
 git add .

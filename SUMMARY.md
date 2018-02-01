@@ -9,6 +9,7 @@
 * [spark学习笔记](工程工具/spark学习笔记.md)
 * [jupyter带目录](工程工具/jupyter安装目录工具.md)
 * [学习链接备用点](工程工具/学习链接备用点.md)
+* [vim配置](工程工具/vim配置.md)
 
 ## 机器学习
 * [xgboost参数和原理](机器学习/xgboost参数和原理.md)

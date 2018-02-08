@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=sklearn博客的修改
+comment=Pandas学习笔记
 cur_path=$PWD
 echo ${cur_path}
 git add .

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=书本介绍修改
+comment=书本结构调整
 cur_path=$PWD
 echo ${cur_path}
 git add .

@@ -1,16 +1,6 @@
 # Summary
-## 介绍
-[本书](https://github.com/Mayexia/gitbooksource/)籍主要为个人平时个人学习的笔记记录，部分文章会发布到本人博客中去，[博客地址](https://starmaye.github.io)
-
 
 ## 工程工具
-* [git链接多个账号](工程工具/git连接多个账号.md)
-* [git学习代码](工程工具/git学习代码.md)
-* [spark学习笔记](工程工具/spark学习笔记.md)
-* [jupyter带目录](工程工具/jupyter安装目录工具.md)
-* [学习链接备用点](工程工具/学习链接备用点.md)
-* [vim配置](工程工具/vim配置.md)
-* [Pandas学习笔记](工程工具/Pandas学习笔记.md)
 * [Hive函数大全](工程工具/Hive函数大全/Hive函数大全.md)
   * [关系运算](工程工具/Hive函数大全/关系运算.md)
   * [数学运算](工程工具/Hive函数大全/数学运算.md)
@@ -20,6 +10,24 @@
   * [字符串函数](工程工具/Hive函数大全/字符串函数.md)
   * [统计集合函数](工程工具/Hive函数大全/统计集合函数.md)
   * [复合复杂函数](工程工具/Hive函数大全/复合复杂函数.md)
+
+* [spark笔记](工程工具/spark笔记/spark笔记.md)
+  * [spark小知识点](工程工具/spark笔记/spark小知识点.md)
+
+* [Pandas笔记](工程工具/Pandas笔记/Pandas笔记.md)
+  * [Pandas数据加载](工程工具/Pandas笔记/Pandas数据加载.md)
+
+* [git笔记](工程工具/git笔记/git笔记.md)
+  * [git链接多个账号](工程工具/git笔记/git连接多个账号.md)
+  * [git学习代码](工程工具/git笔记/git学习代码.md)
+
+
+* [jupyter带目录](工程工具/jupyter安装目录工具.md)
+* [学习链接备用点](工程工具/学习链接备用点.md)
+* [vim配置](工程工具/vim配置.md)
+
+
+
 
 
 

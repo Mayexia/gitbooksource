@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=Hive函数大全添加
+comment=书本介绍修改
 cur_path=$PWD
 echo ${cur_path}
 git add .

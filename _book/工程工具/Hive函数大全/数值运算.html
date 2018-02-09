@@ -1,0 +1,1270 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数值运算 · Maye的个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xiachi">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="时间运算.html" />
+    
+    
+    <link rel="prev" href="逻辑运算.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://starmaye.github.io" target="_blank" class="custom-link">Maye的个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工程工具</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../git连接多个账号.html">
+            
+                <a href="../git连接多个账号.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    git链接多个账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../git学习代码.html">
+            
+                <a href="../git学习代码.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    git学习代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../spark学习笔记.html">
+            
+                <a href="../spark学习笔记.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    spark学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../jupyter安装目录工具.html">
+            
+                <a href="../jupyter安装目录工具.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    jupyter带目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../学习链接备用点.html">
+            
+                <a href="../学习链接备用点.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    学习链接备用点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../vim配置.html">
+            
+                <a href="../vim配置.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    vim配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Pandas学习笔记.html">
+            
+                <a href="../Pandas学习笔记.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    Pandas学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Hive函数大全.html">
+            
+                <a href="Hive函数大全.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Hive函数大全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="关系运算.html">
+            
+                <a href="关系运算.html">
+            
+                    
+                        <b>2.8.1.</b>
+                    
+                    关系运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="数学运算.html">
+            
+                <a href="数学运算.html">
+            
+                    
+                        <b>2.8.2.</b>
+                    
+                    数学运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" data-path="逻辑运算.html">
+            
+                <a href="逻辑运算.html">
+            
+                    
+                        <b>2.8.3.</b>
+                    
+                    逻辑运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8.4" data-path="数值运算.html">
+            
+                <a href="数值运算.html">
+            
+                    
+                        <b>2.8.4.</b>
+                    
+                    数值运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.5" data-path="时间运算.html">
+            
+                <a href="时间运算.html">
+            
+                    
+                        <b>2.8.5.</b>
+                    
+                    时间运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.6" data-path="字符串函数.html">
+            
+                <a href="字符串函数.html">
+            
+                    
+                        <b>2.8.6.</b>
+                    
+                    字符串函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.7" data-path="统计集合函数.html">
+            
+                <a href="统计集合函数.html">
+            
+                    
+                        <b>2.8.7.</b>
+                    
+                    统计集合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.8" data-path="复合复杂函数.html">
+            
+                <a href="复合复杂函数.html">
+            
+                    
+                        <b>2.8.8.</b>
+                    
+                    复合复杂函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">机器学习</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../机器学习/xgboost参数和原理.html">
+            
+                <a href="../../机器学习/xgboost参数和原理.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    xgboost参数和原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">自然语言处理</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                <a href="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    topic_word_embedings论文解读和实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">代码示例</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                <a href="../../代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    matplotlib基本绘图示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../代码Demo/sklearn聚类/sklearn聚类.html">
+            
+                <a href="../../代码Demo/sklearn聚类/sklearn聚类.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    sklearn聚类demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">gitbook的基本使用</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../gitbook_files/introduction.html">
+            
+                <a href="../../gitbook_files/introduction.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../gitbook_files/installation.html">
+            
+                <a href="../../gitbook_files/installation.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../gitbook_files/commands.html">
+            
+                <a href="../../gitbook_files/commands.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../gitbook_files/structure.html">
+            
+                <a href="../../gitbook_files/structure.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../gitbook_files/settings.html">
+            
+                <a href="../../gitbook_files/settings.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../gitbook_files/plugins.html">
+            
+                <a href="../../gitbook_files/plugins.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../gitbook_files/themes.html">
+            
+                <a href="../../gitbook_files/themes.html">
+            
+                    
+                        <b>6.7.</b>
+                    
+                    主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../gitbook_files/bookjson.md">
+            
+                <span>
+            
+                    
+                        <b>6.8.</b>
+                    
+                    bookjson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数值运算</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6570;&#x503C;&#x8BA1;&#x7B97;">&#x6570;&#x503C;&#x8BA1;&#x7B97;</a></li><ul><li><a href="#1-&#x53D6;&#x6574;&#x51FD;&#x6570;-round">1. &#x53D6;&#x6574;&#x51FD;&#x6570;: round</a></li><li><a href="#2-&#x6307;&#x5B9A;&#x7CBE;&#x5EA6;&#x53D6;&#x6574;&#x51FD;&#x6570;-round">2. &#x6307;&#x5B9A;&#x7CBE;&#x5EA6;&#x53D6;&#x6574;&#x51FD;&#x6570;: round</a></li><li><a href="#3-&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x51FD;&#x6570;-floor">3. &#x5411;&#x4E0B;&#x53D6;&#x6574;&#x51FD;&#x6570;: floor</a></li><li><a href="#4-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceil">4. &#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;: ceil</a></li><li><a href="#5-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceiling">5. &#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;: ceiling</a></li><li><a href="#6-&#x53D6;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;-rand">6. &#x53D6;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;: rand</a></li><li><a href="#7-&#x81EA;&#x7136;&#x6307;&#x6570;&#x51FD;&#x6570;-exp">7. &#x81EA;&#x7136;&#x6307;&#x6570;&#x51FD;&#x6570;: exp</a></li><li><a href="#8-&#x81EA;&#x7136;&#x5BF9;&#x6570;&#x51FD;&#x6570;-ln">8. &#x81EA;&#x7136;&#x5BF9;&#x6570;&#x51FD;&#x6570;: ln</a></li><li><a href="#8-&#x4EE5;10&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log10">8. &#x4EE5;10&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;: log10</a></li><li><a href="#9-&#x4EE5;2&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log2">9. &#x4EE5;2&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;: log2</a></li><li><a href="#10-&#x5BF9;&#x6570;&#x51FD;&#x6570;-log">10. &#x5BF9;&#x6570;&#x51FD;&#x6570;: log</a></li><li><a href="#11-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-pow">11. &#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;: pow</a></li><li><a href="#12-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-power">12. &#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;: power</a></li><li><a href="#13-&#x5F00;&#x5E73;&#x65B9;&#x51FD;&#x6570;-sqrt">13. &#x5F00;&#x5E73;&#x65B9;&#x51FD;&#x6570;: sqrt</a></li><li><a href="#14-&#x4E8C;&#x8FDB;&#x5236;&#x51FD;&#x6570;-bin">14. &#x4E8C;&#x8FDB;&#x5236;&#x51FD;&#x6570;: bin</a></li><li><a href="#15-&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-hex">15. &#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;: hex</a></li><li><a href="#16-&#x53CD;&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-unhex">16. &#x53CD;&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;: unhex</a></li><li><a href="#17-&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x51FD;&#x6570;-conv">17. &#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x51FD;&#x6570;: conv</a></li><li><a href="#18-&#x7EDD;&#x5BF9;&#x503C;&#x51FD;&#x6570;-abs">18. &#x7EDD;&#x5BF9;&#x503C;&#x51FD;&#x6570;: abs</a></li><li><a href="#19-&#x6B63;&#x53D6;&#x4F59;&#x51FD;&#x6570;-pmod">19. &#x6B63;&#x53D6;&#x4F59;&#x51FD;&#x6570;: pmod</a></li><li><a href="#20-&#x6B63;&#x5F26;&#x51FD;&#x6570;-sin">20. &#x6B63;&#x5F26;&#x51FD;&#x6570;: sin</a></li><li><a href="#21-&#x53CD;&#x6B63;&#x5F26;&#x51FD;&#x6570;-asin">21. &#x53CD;&#x6B63;&#x5F26;&#x51FD;&#x6570;: asin</a></li><li><a href="#22-&#x4F59;&#x5F26;&#x51FD;&#x6570;-cos">22. &#x4F59;&#x5F26;&#x51FD;&#x6570;: cos</a></li><li><a href="#23-&#x53CD;&#x4F59;&#x5F26;&#x51FD;&#x6570;-acos">23. &#x53CD;&#x4F59;&#x5F26;&#x51FD;&#x6570;: acos</a></li><li><a href="#24-positive&#x51FD;&#x6570;-positive">24. positive&#x51FD;&#x6570;: positive</a></li><li><a href="#25-negative&#x51FD;&#x6570;-negative">25. negative&#x51FD;&#x6570;: negative</a></li></ul></ul></div><a href="#&#x6570;&#x503C;&#x8BA1;&#x7B97;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6570;&#x503C;&#x8BA1;&#x7B97;"><a name="&#x6570;&#x503C;&#x8BA1;&#x7B97;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x503C;&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x503C;&#x8BA1;&#x7B97;</h1>
+<h2 id="1-&#x53D6;&#x6574;&#x51FD;&#x6570;-round"><a name="1-&#x53D6;&#x6574;&#x51FD;&#x6570;-round" class="anchor-navigation-ex-anchor" href="#1-&#x53D6;&#x6574;&#x51FD;&#x6570;-round"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x53D6;&#x6574;&#x51FD;&#x6570;: round</h2>
+<pre><code>&#x8BED;&#x6CD5;: round(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: BIGINT
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;double&#x7C7B;&#x578B;&#x7684;&#x6574;&#x6570;&#x503C;&#x90E8;&#x5206;&#xFF08;&#x9075;&#x5FAA;&#x56DB;&#x820D;&#x4E94;&#x5165;&#xFF09;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select round(3.1415926) from table_name;
+
+3
+
+hive&gt; select round(3.5) from table_name;
+
+4
+
+hive&gt; create table table_name as select round(9542.158) fromtable_name;
+
+hive&gt; describe table_name;
+
+_c0     bigint
+</code></pre>
+<h2 id="2-&#x6307;&#x5B9A;&#x7CBE;&#x5EA6;&#x53D6;&#x6574;&#x51FD;&#x6570;-round"><a name="2-&#x6307;&#x5B9A;&#x7CBE;&#x5EA6;&#x53D6;&#x6574;&#x51FD;&#x6570;-round" class="anchor-navigation-ex-anchor" href="#2-&#x6307;&#x5B9A;&#x7CBE;&#x5EA6;&#x53D6;&#x6574;&#x51FD;&#x6570;-round"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x6307;&#x5B9A;&#x7CBE;&#x5EA6;&#x53D6;&#x6574;&#x51FD;&#x6570;: round</h2>
+<pre><code>&#x8BED;&#x6CD5;: round(double a, int d)
+
+&#x8FD4;&#x56DE;&#x503C;: DOUBLE
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7CBE;&#x5EA6;d&#x7684;double&#x7C7B;&#x578B;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">hive&gt; select round(3.1415926,4) from table_name;
+
+3.1416
+</code></pre>
+<h2 id="3-&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x51FD;&#x6570;-floor"><a name="3-&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x51FD;&#x6570;-floor" class="anchor-navigation-ex-anchor" href="#3-&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x51FD;&#x6570;-floor"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5411;&#x4E0B;&#x53D6;&#x6574;&#x51FD;&#x6570;: floor</h2>
+<pre><code>&#x8BED;&#x6CD5;: floor(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: BIGINT
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x7B49;&#x4E8E;&#x6216;&#x8005;&#x5C0F;&#x4E8E;&#x8BE5;double&#x53D8;&#x91CF;&#x7684;&#x6700;&#x5927;&#x7684;&#x6574;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select floor(3.1415926) from table_name;
+
+3
+
+hive&gt; select floor(25) from table_name;
+
+25
+</code></pre>
+<h2 id="4-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceil"><a name="4-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceil" class="anchor-navigation-ex-anchor" href="#4-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceil"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;: ceil</h2>
+<pre><code>&#x8BED;&#x6CD5;: ceil(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: BIGINT
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x7B49;&#x4E8E;&#x6216;&#x8005;&#x5927;&#x4E8E;&#x8BE5;double&#x53D8;&#x91CF;&#x7684;&#x6700;&#x5C0F;&#x7684;&#x6574;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">hive&gt; select ceil(3.1415926) from table_name;
+
+4
+
+hive&gt; select ceil(46) from table_name;
+
+46
+</code></pre>
+<h2 id="5-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceiling"><a name="5-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceiling" class="anchor-navigation-ex-anchor" href="#5-&#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;-ceiling"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5411;&#x4E0A;&#x53D6;&#x6574;&#x51FD;&#x6570;: ceiling</h2>
+<pre><code>&#x8BED;&#x6CD5;: ceiling(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: BIGINT
+
+&#x8BF4;&#x660E;:&#x4E0E;ceil&#x529F;&#x80FD;&#x76F8;&#x540C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">hive&gt; select ceiling(3.1415926) from table_name;
+
+4
+
+hive&gt; select ceiling(46) from table_name;
+
+46
+</code></pre>
+<h2 id="6-&#x53D6;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;-rand"><a name="6-&#x53D6;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;-rand" class="anchor-navigation-ex-anchor" href="#6-&#x53D6;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;-rand"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x53D6;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;: rand</h2>
+<pre><code>&#x8BED;&#x6CD5;: rand(),rand(int seed)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;0&#x5230;1&#x8303;&#x56F4;&#x5185;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x79CD;&#x5B50;seed&#xFF0C;&#x5219;&#x4F1A;&#x7B49;&#x5230;&#x4E00;&#x4E2A;&#x7A33;&#x5B9A;&#x7684;&#x968F;&#x673A;&#x6570;&#x5E8F;&#x5217;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select rand() from table_name;
+
+0.5577432776034763
+
+hive&gt; select rand() from table_name;
+
+0.6638336467363424
+
+hive&gt; select rand(100) from table_name;
+
+0.7220096548596434
+
+hive&gt; select rand(100) from table_name;
+
+0.7220096548596434
+</code></pre>
+<h2 id="7-&#x81EA;&#x7136;&#x6307;&#x6570;&#x51FD;&#x6570;-exp"><a name="7-&#x81EA;&#x7136;&#x6307;&#x6570;&#x51FD;&#x6570;-exp" class="anchor-navigation-ex-anchor" href="#7-&#x81EA;&#x7136;&#x6307;&#x6570;&#x51FD;&#x6570;-exp"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x81EA;&#x7136;&#x6307;&#x6570;&#x51FD;&#x6570;: exp</h2>
+<pre><code>&#x8BED;&#x6CD5;: exp(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x81EA;&#x7136;&#x5BF9;&#x6570;e&#x7684;a&#x6B21;&#x65B9;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select exp(2) from table_name;
+
+7.38905609893065
+</code></pre>
+<h2 id="8-&#x81EA;&#x7136;&#x5BF9;&#x6570;&#x51FD;&#x6570;-ln"><a name="8-&#x81EA;&#x7136;&#x5BF9;&#x6570;&#x51FD;&#x6570;-ln" class="anchor-navigation-ex-anchor" href="#8-&#x81EA;&#x7136;&#x5BF9;&#x6570;&#x51FD;&#x6570;-ln"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x81EA;&#x7136;&#x5BF9;&#x6570;&#x51FD;&#x6570;: ln</h2>
+<pre><code>&#x8BED;&#x6CD5;: ln(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x81EA;&#x7136;&#x5BF9;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select ln(7.38905609893065) from table_name;
+
+2.0
+</code></pre>
+<h2 id="8-&#x4EE5;10&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log10"><a name="8-&#x4EE5;10&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log10" class="anchor-navigation-ex-anchor" href="#8-&#x4EE5;10&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log10"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x4EE5;10&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;: log10</h2>
+<pre><code>&#x8BED;&#x6CD5;: log10(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x4EE5;10&#x4E3A;&#x5E95;&#x7684;a&#x7684;&#x5BF9;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select log10(100) from table_name;
+
+2.0
+</code></pre>
+<h2 id="9-&#x4EE5;2&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log2"><a name="9-&#x4EE5;2&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log2" class="anchor-navigation-ex-anchor" href="#9-&#x4EE5;2&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;-log2"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x4EE5;2&#x4E3A;&#x5E95;&#x5BF9;&#x6570;&#x51FD;&#x6570;: log2</h2>
+<pre><code>&#x8BED;&#x6CD5;: log2(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x4EE5;2&#x4E3A;&#x5E95;&#x7684;a&#x7684;&#x5BF9;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select log2(8) from table_name;
+
+3.0
+</code></pre>
+<h2 id="10-&#x5BF9;&#x6570;&#x51FD;&#x6570;-log"><a name="10-&#x5BF9;&#x6570;&#x51FD;&#x6570;-log" class="anchor-navigation-ex-anchor" href="#10-&#x5BF9;&#x6570;&#x51FD;&#x6570;-log"><i class="fa fa-link" aria-hidden="true"></i></a>10. &#x5BF9;&#x6570;&#x51FD;&#x6570;: log</h2>
+<pre><code>&#x8BED;&#x6CD5;: log(double base, double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x4EE5;base&#x4E3A;&#x5E95;&#x7684;a&#x7684;&#x5BF9;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select log(4,256) from table_name;
+
+4.0
+</code></pre>
+<h2 id="11-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-pow"><a name="11-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-pow" class="anchor-navigation-ex-anchor" href="#11-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-pow"><i class="fa fa-link" aria-hidden="true"></i></a>11. &#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;: pow</h2>
+<pre><code>&#x8BED;&#x6CD5;: pow(double a, double p)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;p&#x6B21;&#x5E42;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select pow(2,4) from table_name;
+
+16.0
+</code></pre>
+<h2 id="12-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-power"><a name="12-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-power" class="anchor-navigation-ex-anchor" href="#12-&#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;-power"><i class="fa fa-link" aria-hidden="true"></i></a>12. &#x5E42;&#x8FD0;&#x7B97;&#x51FD;&#x6570;: power</h2>
+<pre><code>&#x8BED;&#x6CD5;: power(double a, double p)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;p&#x6B21;&#x5E42;,&#x4E0E;pow&#x529F;&#x80FD;&#x76F8;&#x540C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select power(2,4) from table_name;
+
+16.0
+</code></pre>
+<h2 id="13-&#x5F00;&#x5E73;&#x65B9;&#x51FD;&#x6570;-sqrt"><a name="13-&#x5F00;&#x5E73;&#x65B9;&#x51FD;&#x6570;-sqrt" class="anchor-navigation-ex-anchor" href="#13-&#x5F00;&#x5E73;&#x65B9;&#x51FD;&#x6570;-sqrt"><i class="fa fa-link" aria-hidden="true"></i></a>13. &#x5F00;&#x5E73;&#x65B9;&#x51FD;&#x6570;: sqrt</h2>
+<pre><code>&#x8BED;&#x6CD5;: sqrt(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x5E73;&#x65B9;&#x6839;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select sqrt(16) from table_name;
+
+4.0
+</code></pre>
+<h2 id="14-&#x4E8C;&#x8FDB;&#x5236;&#x51FD;&#x6570;-bin"><a name="14-&#x4E8C;&#x8FDB;&#x5236;&#x51FD;&#x6570;-bin" class="anchor-navigation-ex-anchor" href="#14-&#x4E8C;&#x8FDB;&#x5236;&#x51FD;&#x6570;-bin"><i class="fa fa-link" aria-hidden="true"></i></a>14. &#x4E8C;&#x8FDB;&#x5236;&#x51FD;&#x6570;: bin</h2>
+<pre><code>&#x8BED;&#x6CD5;: bin(BIGINT a)
+
+&#x8FD4;&#x56DE;&#x503C;: string
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x4EE3;&#x7801;&#x8868;&#x793A;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select bin(7) from table_name;
+
+111
+</code></pre>
+<h2 id="15-&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-hex"><a name="15-&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-hex" class="anchor-navigation-ex-anchor" href="#15-&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-hex"><i class="fa fa-link" aria-hidden="true"></i></a>15. &#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;: hex</h2>
+<pre><code>&#x8BED;&#x6CD5;: hex(BIGINT a)
+
+&#x8FD4;&#x56DE;&#x503C;: string
+
+&#x8BF4;&#x660E;:&#x5982;&#x679C;&#x53D8;&#x91CF;&#x662F;int&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;a&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x8868;&#x793A;&#xFF1B;&#x5982;&#x679C;&#x53D8;&#x91CF;&#x662F;string&#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x8868;&#x793A;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select hex(17) from table_name;
+
+11
+
+hive&gt; select hex(&#x2018;abc&#x2019;) from table_name;
+
+616263
+</code></pre>
+<h2 id="16-&#x53CD;&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-unhex"><a name="16-&#x53CD;&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-unhex" class="anchor-navigation-ex-anchor" href="#16-&#x53CD;&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;-unhex"><i class="fa fa-link" aria-hidden="true"></i></a>16. &#x53CD;&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x51FD;&#x6570;: unhex</h2>
+<pre><code>&#x8BED;&#x6CD5;: unhex(string a)
+
+&#x8FD4;&#x56DE;&#x503C;: string
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x8BE5;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x6240;&#x4EE3;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select unhex(&#x2018;616263&#x2019;) from table_name;
+
+abc
+
+hive&gt; select unhex(&#x2018;11&#x2019;) from table_name;
+
+-
+
+hive&gt; select unhex(616263) from table_name;
+
+abc
+</code></pre>
+<h2 id="17-&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x51FD;&#x6570;-conv"><a name="17-&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x51FD;&#x6570;-conv" class="anchor-navigation-ex-anchor" href="#17-&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x51FD;&#x6570;-conv"><i class="fa fa-link" aria-hidden="true"></i></a>17. &#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x51FD;&#x6570;: conv</h2>
+<pre><code>&#x8BED;&#x6CD5;: conv(BIGINT num, int from_base, int to_base)
+
+&#x8FD4;&#x56DE;&#x503C;: string
+
+&#x8BF4;&#x660E;:&#x5C06;&#x6570;&#x503C;num&#x4ECE;from_base&#x8FDB;&#x5236;&#x8F6C;&#x5316;&#x5230;to_base&#x8FDB;&#x5236;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select conv(17,10,16) from table_name;
+
+11
+
+hive&gt; select conv(17,10,2) from table_name;
+
+10001
+</code></pre>
+<h2 id="18-&#x7EDD;&#x5BF9;&#x503C;&#x51FD;&#x6570;-abs"><a name="18-&#x7EDD;&#x5BF9;&#x503C;&#x51FD;&#x6570;-abs" class="anchor-navigation-ex-anchor" href="#18-&#x7EDD;&#x5BF9;&#x503C;&#x51FD;&#x6570;-abs"><i class="fa fa-link" aria-hidden="true"></i></a>18. &#x7EDD;&#x5BF9;&#x503C;&#x51FD;&#x6570;: abs</h2>
+<pre><code>&#x8BED;&#x6CD5;: abs(double a)  abs(int a)
+
+&#x8FD4;&#x56DE;&#x503C;: double       int
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x6570;&#x503C;a&#x7684;&#x7EDD;&#x5BF9;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select abs(-3.9) from table_name;
+
+3.9
+
+hive&gt; select abs(10.9) from table_name;
+
+10.9
+</code></pre>
+<h2 id="19-&#x6B63;&#x53D6;&#x4F59;&#x51FD;&#x6570;-pmod"><a name="19-&#x6B63;&#x53D6;&#x4F59;&#x51FD;&#x6570;-pmod" class="anchor-navigation-ex-anchor" href="#19-&#x6B63;&#x53D6;&#x4F59;&#x51FD;&#x6570;-pmod"><i class="fa fa-link" aria-hidden="true"></i></a>19. &#x6B63;&#x53D6;&#x4F59;&#x51FD;&#x6570;: pmod</h2>
+<pre><code>&#x8BED;&#x6CD5;: pmod(int a, int b),pmod(double a, double b)
+
+&#x8FD4;&#x56DE;&#x503C;: int double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;&#x6B63;&#x7684;a&#x9664;&#x4EE5;b&#x7684;&#x4F59;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select pmod(9,4) from table_name;
+
+1
+
+hive&gt; select pmod(-9,4) from table_name;
+
+3
+</code></pre>
+<h2 id="20-&#x6B63;&#x5F26;&#x51FD;&#x6570;-sin"><a name="20-&#x6B63;&#x5F26;&#x51FD;&#x6570;-sin" class="anchor-navigation-ex-anchor" href="#20-&#x6B63;&#x5F26;&#x51FD;&#x6570;-sin"><i class="fa fa-link" aria-hidden="true"></i></a>20. &#x6B63;&#x5F26;&#x51FD;&#x6570;: sin</h2>
+<pre><code>&#x8BED;&#x6CD5;: sin(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x6B63;&#x5F26;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select sin(0.8) from table_name;
+
+0.7173560908995228
+</code></pre>
+<h2 id="21-&#x53CD;&#x6B63;&#x5F26;&#x51FD;&#x6570;-asin"><a name="21-&#x53CD;&#x6B63;&#x5F26;&#x51FD;&#x6570;-asin" class="anchor-navigation-ex-anchor" href="#21-&#x53CD;&#x6B63;&#x5F26;&#x51FD;&#x6570;-asin"><i class="fa fa-link" aria-hidden="true"></i></a>21. &#x53CD;&#x6B63;&#x5F26;&#x51FD;&#x6570;: asin</h2>
+<pre><code>&#x8BED;&#x6CD5;: asin(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x53CD;&#x6B63;&#x5F26;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select asin(0.7173560908995228) from table_name;
+
+0.8
+</code></pre>
+<h2 id="22-&#x4F59;&#x5F26;&#x51FD;&#x6570;-cos"><a name="22-&#x4F59;&#x5F26;&#x51FD;&#x6570;-cos" class="anchor-navigation-ex-anchor" href="#22-&#x4F59;&#x5F26;&#x51FD;&#x6570;-cos"><i class="fa fa-link" aria-hidden="true"></i></a>22. &#x4F59;&#x5F26;&#x51FD;&#x6570;: cos</h2>
+<pre><code>&#x8BED;&#x6CD5;: cos(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x4F59;&#x5F26;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select cos(0.9) from table_name;
+
+0.6216099682706644
+</code></pre>
+<h2 id="23-&#x53CD;&#x4F59;&#x5F26;&#x51FD;&#x6570;-acos"><a name="23-&#x53CD;&#x4F59;&#x5F26;&#x51FD;&#x6570;-acos" class="anchor-navigation-ex-anchor" href="#23-&#x53CD;&#x4F59;&#x5F26;&#x51FD;&#x6570;-acos"><i class="fa fa-link" aria-hidden="true"></i></a>23. &#x53CD;&#x4F59;&#x5F26;&#x51FD;&#x6570;: acos</h2>
+<pre><code>&#x8BED;&#x6CD5;: acos(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a&#x7684;&#x53CD;&#x4F59;&#x5F26;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select acos(0.6216099682706644) from table_name;
+
+0.9
+</code></pre>
+<h2 id="24-positive&#x51FD;&#x6570;-positive"><a name="24-positive&#x51FD;&#x6570;-positive" class="anchor-navigation-ex-anchor" href="#24-positive&#x51FD;&#x6570;-positive"><i class="fa fa-link" aria-hidden="true"></i></a>24. positive&#x51FD;&#x6570;: positive</h2>
+<pre><code>&#x8BED;&#x6CD5;: positive(int a), positive(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: int double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;a
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select positive(-10) from table_name;
+
+-10
+
+hive&gt; select positive(12) from table_name;
+
+12
+</code></pre>
+<h2 id="25-negative&#x51FD;&#x6570;-negative"><a name="25-negative&#x51FD;&#x6570;-negative" class="anchor-navigation-ex-anchor" href="#25-negative&#x51FD;&#x6570;-negative"><i class="fa fa-link" aria-hidden="true"></i></a>25. negative&#x51FD;&#x6570;: negative</h2>
+<pre><code>&#x8BED;&#x6CD5;: negative(int a), negative(double a)
+
+&#x8FD4;&#x56DE;&#x503C;: int double
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;-a
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+
+hive&gt; select negative(-5) from table_name;
+
+5
+
+hive&gt; select negative(8) from table_name;
+
+-8
+</code></pre>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="逻辑运算.html" class="navigation navigation-prev " aria-label="Previous page: 逻辑运算">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="时间运算.html" class="navigation navigation-next " aria-label="Next page: 时间运算">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数值运算","level":"2.8.4","depth":2,"next":{"title":"时间运算","level":"2.8.5","depth":2,"path":"工程工具/Hive函数大全/时间运算.md","ref":"工程工具/Hive函数大全/时间运算.md","articles":[]},"previous":{"title":"逻辑运算","level":"2.8.3","depth":2,"path":"工程工具/Hive函数大全/逻辑运算.md","ref":"工程工具/Hive函数大全/逻辑运算.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"工程工具/Hive函数大全/数值运算.md","mtime":"2018-02-09T08:55:25.301Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-09T07:30:24.561Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

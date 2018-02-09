@@ -1,0 +1,997 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>统计集合函数 · Maye的个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xiachi">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="复合复杂函数.html" />
+    
+    
+    <link rel="prev" href="字符串函数.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://starmaye.github.io" target="_blank" class="custom-link">Maye的个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工程工具</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../git连接多个账号.html">
+            
+                <a href="../git连接多个账号.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    git链接多个账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../git学习代码.html">
+            
+                <a href="../git学习代码.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    git学习代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../spark学习笔记.html">
+            
+                <a href="../spark学习笔记.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    spark学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../jupyter安装目录工具.html">
+            
+                <a href="../jupyter安装目录工具.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    jupyter带目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../学习链接备用点.html">
+            
+                <a href="../学习链接备用点.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    学习链接备用点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../vim配置.html">
+            
+                <a href="../vim配置.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    vim配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Pandas学习笔记.html">
+            
+                <a href="../Pandas学习笔记.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    Pandas学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Hive函数大全.html">
+            
+                <a href="Hive函数大全.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Hive函数大全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="关系运算.html">
+            
+                <a href="关系运算.html">
+            
+                    
+                        <b>2.8.1.</b>
+                    
+                    关系运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="数学运算.html">
+            
+                <a href="数学运算.html">
+            
+                    
+                        <b>2.8.2.</b>
+                    
+                    数学运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" data-path="逻辑运算.html">
+            
+                <a href="逻辑运算.html">
+            
+                    
+                        <b>2.8.3.</b>
+                    
+                    逻辑运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.4" data-path="数值运算.html">
+            
+                <a href="数值运算.html">
+            
+                    
+                        <b>2.8.4.</b>
+                    
+                    数值运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.5" data-path="时间运算.html">
+            
+                <a href="时间运算.html">
+            
+                    
+                        <b>2.8.5.</b>
+                    
+                    时间运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.6" data-path="字符串函数.html">
+            
+                <a href="字符串函数.html">
+            
+                    
+                        <b>2.8.6.</b>
+                    
+                    字符串函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8.7" data-path="统计集合函数.html">
+            
+                <a href="统计集合函数.html">
+            
+                    
+                        <b>2.8.7.</b>
+                    
+                    统计集合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.8" data-path="复合复杂函数.html">
+            
+                <a href="复合复杂函数.html">
+            
+                    
+                        <b>2.8.8.</b>
+                    
+                    复合复杂函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">机器学习</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../机器学习/xgboost参数和原理.html">
+            
+                <a href="../../机器学习/xgboost参数和原理.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    xgboost参数和原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">自然语言处理</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                <a href="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    topic_word_embedings论文解读和实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">代码示例</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                <a href="../../代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    matplotlib基本绘图示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../代码Demo/sklearn聚类/sklearn聚类.html">
+            
+                <a href="../../代码Demo/sklearn聚类/sklearn聚类.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    sklearn聚类demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">gitbook的基本使用</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../gitbook_files/introduction.html">
+            
+                <a href="../../gitbook_files/introduction.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../gitbook_files/installation.html">
+            
+                <a href="../../gitbook_files/installation.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../gitbook_files/commands.html">
+            
+                <a href="../../gitbook_files/commands.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../gitbook_files/structure.html">
+            
+                <a href="../../gitbook_files/structure.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../gitbook_files/settings.html">
+            
+                <a href="../../gitbook_files/settings.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../gitbook_files/plugins.html">
+            
+                <a href="../../gitbook_files/plugins.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../gitbook_files/themes.html">
+            
+                <a href="../../gitbook_files/themes.html">
+            
+                    
+                        <b>6.7.</b>
+                    
+                    主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../gitbook_files/bookjson.md">
+            
+                <span>
+            
+                    
+                        <b>6.8.</b>
+                    
+                    bookjson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >统计集合函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;">&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;</a></li><ul><li><a href="#1-&#x4E2A;&#x6570;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-count">1. &#x4E2A;&#x6570;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: count</a></li><li><a href="#2-&#x603B;&#x548C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-sum">2. &#x603B;&#x548C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: sum</a></li><li><a href="#3-&#x5E73;&#x5747;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-avg">3. &#x5E73;&#x5747;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: avg</a></li><li><a href="#4-&#x6700;&#x5C0F;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-min">4. &#x6700;&#x5C0F;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: min</a></li><li><a href="#5-&#x6700;&#x5927;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-max">5. &#x6700;&#x5927;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: max</a></li><li><a href="#6-&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x51FD;&#x6570;varpop">6. &#x975E;&#x7A7A;&#x96C6;&#x5408;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x51FD;&#x6570;:var_pop</a></li><li><a href="#8-&#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevpop">8. &#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;:stddev_pop</a></li><li><a href="#9-&#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevsamp">9. &#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;:stddev_samp</a></li><li><a href="#10&#xFF0E;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentile">10&#xFF0E;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile</a></li><li><a href="#12-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox">12. &#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile_approx</a></li><li><a href="#13-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox">13. &#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile_approx</a></li><li><a href="#14-&#x76F4;&#x65B9;&#x56FE;histogramnumeric">14. &#x76F4;&#x65B9;&#x56FE;:histogram_numeric</a></li></ul></ul></div><a href="#&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><a name="&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x5408;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;</h1>
+<h2 id="1-&#x4E2A;&#x6570;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-count"><a name="1-&#x4E2A;&#x6570;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-count" class="anchor-navigation-ex-anchor" href="#1-&#x4E2A;&#x6570;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-count"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E2A;&#x6570;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: count</h2>
+<pre><code>&#x8BED;&#x6CD5;: count(*), count(expr), count(DISTINCT expr[, expr_.])
+
+&#x8FD4;&#x56DE;&#x503C;: int
+
+&#x8BF4;&#x660E;: count(*)&#x7EDF;&#x8BA1;&#x68C0;&#x7D22;&#x51FA;&#x7684;&#x884C;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x5305;&#x62EC;NULL&#x503C;&#x7684;&#x884C;&#xFF1B;count(expr)&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x975E;&#x7A7A;&#x503C;&#x7684;&#x4E2A;&#x6570;&#xFF1B;count(DISTINCTexpr[, expr_.])&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x975E;&#x7A7A;&#x503C;&#x7684;&#x4E2A;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select count(*) from lxw_dual;
+
+20
+
+hive&gt; select count(distinct t) from lxw_dual;
+
+10
+</code></pre>
+<h2 id="2-&#x603B;&#x548C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-sum"><a name="2-&#x603B;&#x548C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-sum" class="anchor-navigation-ex-anchor" href="#2-&#x603B;&#x548C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-sum"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x603B;&#x548C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: sum</h2>
+<pre><code>&#x8BED;&#x6CD5;: sum(col), sum(DISTINCT col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;: sum(col)&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;col&#x7684;&#x76F8;&#x52A0;&#x7684;&#x7ED3;&#x679C;&#xFF1B;sum(DISTINCT col)&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x4E2D;col&#x4E0D;&#x540C;&#x503C;&#x76F8;&#x52A0;&#x7684;&#x7ED3;&#x679C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select sum(t) from lxw_dual;
+
+100
+
+hive&gt; select sum(distinct t) from lxw_dual;
+
+70
+</code></pre>
+<h2 id="3-&#x5E73;&#x5747;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-avg"><a name="3-&#x5E73;&#x5747;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-avg" class="anchor-navigation-ex-anchor" href="#3-&#x5E73;&#x5747;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-avg"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5E73;&#x5747;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: avg</h2>
+<pre><code>&#x8BED;&#x6CD5;: avg(col), avg(DISTINCT col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;: avg(col)&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;col&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF1B;avg(DISTINCT col)&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x4E2D;col&#x4E0D;&#x540C;&#x503C;&#x76F8;&#x52A0;&#x7684;&#x5E73;&#x5747;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select avg(t) from lxw_dual;
+
+50
+
+hive&gt; select avg (distinct t) from lxw_dual;
+
+30
+</code></pre>
+<h2 id="4-&#x6700;&#x5C0F;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-min"><a name="4-&#x6700;&#x5C0F;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-min" class="anchor-navigation-ex-anchor" href="#4-&#x6700;&#x5C0F;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-min"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6700;&#x5C0F;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: min</h2>
+<pre><code>&#x8BED;&#x6CD5;: min(col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;col&#x5B57;&#x6BB5;&#x7684;&#x6700;&#x5C0F;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select min(t) from lxw_dual;
+
+20
+</code></pre>
+<h2 id="5-&#x6700;&#x5927;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-max"><a name="5-&#x6700;&#x5927;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-max" class="anchor-navigation-ex-anchor" href="#5-&#x6700;&#x5927;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;-max"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x6700;&#x5927;&#x503C;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;: max</h2>
+<pre><code>&#x8BED;&#x6CD5;: maxcol)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;col&#x5B57;&#x6BB5;&#x7684;&#x6700;&#x5927;&#x503C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select max(t) from lxw_dual;
+
+120
+</code></pre>
+<h2 id="6-&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x51FD;&#x6570;varpop"><a name="6-&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x51FD;&#x6570;varpop" class="anchor-navigation-ex-anchor" href="#6-&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x51FD;&#x6570;varpop"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x975E;&#x7A7A;&#x96C6;&#x5408;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x51FD;&#x6570;:var_pop</h2>
+<pre><code>&#x8BED;&#x6CD5;: var_pop(col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;col&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x7684;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#xFF08;&#x5FFD;&#x7565;null&#xFF09;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<ol>
+<li>&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x6837;&#x672C;&#x53D8;&#x91CF;&#x51FD;&#x6570;:var_samp</li>
+</ol>
+<pre><code>&#x8BED;&#x6CD5;: var_samp (col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;col&#x975E;&#x7A7A;&#x96C6;&#x5408;&#x7684;&#x6837;&#x672C;&#x53D8;&#x91CF;&#xFF08;&#x5FFD;&#x7565;null&#xFF09;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<h2 id="8-&#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevpop"><a name="8-&#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevpop" class="anchor-navigation-ex-anchor" href="#8-&#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevpop"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;:stddev_pop</h2>
+<pre><code>&#x8BED;&#x6CD5;: stddev_pop(col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8BE5;&#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x603B;&#x4F53;&#x6807;&#x51C6;&#x504F;&#x79BB;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x603B;&#x4F53;&#x53D8;&#x91CF;&#x7684;&#x5E73;&#x65B9;&#x6839;&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x4E0E;VAR_POP&#x51FD;&#x6570;&#x7684;&#x5E73;&#x65B9;&#x6839;&#x76F8;&#x540C;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<h2 id="9-&#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevsamp"><a name="9-&#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevsamp" class="anchor-navigation-ex-anchor" href="#9-&#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;stddevsamp"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;&#x51FD;&#x6570;:stddev_samp</h2>
+<pre><code>&#x8BED;&#x6CD5;: stddev_samp (col)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x8BE5;&#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x6837;&#x672C;&#x6807;&#x51C6;&#x504F;&#x79BB;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<h2 id="10&#xFF0E;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentile"><a name="10&#xFF0E;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentile" class="anchor-navigation-ex-anchor" href="#10&#xFF0E;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentile"><i class="fa fa-link" aria-hidden="true"></i></a>10&#xFF0E;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile</h2>
+<pre><code>&#x8BED;&#x6CD5;: percentile(BIGINT col, p)
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x6C42;&#x51C6;&#x786E;&#x7684;&#x7B2C;pth&#x4E2A;&#x767E;&#x5206;&#x4F4D;&#x6570;&#xFF0C;p&#x5FC5;&#x987B;&#x4ECB;&#x4E8E;0&#x548C;1&#x4E4B;&#x95F4;&#xFF0C;&#x4F46;&#x662F;col&#x5B57;&#x6BB5;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x6574;&#x6570;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x6D6E;&#x70B9;&#x6570;&#x7C7B;&#x578B;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<ol>
+<li>&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile</li>
+</ol>
+<pre><code>&#x8BED;&#x6CD5;: percentile(BIGINT col, array(p1 [, p2]&#x2026;))
+
+&#x8FD4;&#x56DE;&#x503C;: array&lt;double&gt;
+
+&#x8BF4;&#x660E;:&#x529F;&#x80FD;&#x548C;&#x4E0A;&#x8FF0;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E4B;&#x540E;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x591A;&#x4E2A;&#x767E;&#x5206;&#x4F4D;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x4E5F;&#x4E3A;array&lt;double&gt;&#xFF0C;&#x5176;&#x4E2D;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x767E;&#x5206;&#x4F4D;&#x6570;&#x3002;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+<span class="hljs-keyword">select</span> percentile(score,&lt;<span class="hljs-number">0.2</span>,<span class="hljs-number">0.4</span>&gt;) <span class="hljs-keyword">from</span> lxw_dual&#xFF1B;&#x53D6;<span class="hljs-number">0.2</span>&#xFF0C;<span class="hljs-number">0.4</span>&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;
+</code></pre>
+<h2 id="12-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox"><a name="12-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox" class="anchor-navigation-ex-anchor" href="#12-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox"><i class="fa fa-link" aria-hidden="true"></i></a>12. &#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile_approx</h2>
+<pre><code>&#x8BED;&#x6CD5;: percentile_approx(DOUBLE col, p [, B])
+
+&#x8FD4;&#x56DE;&#x503C;: double
+
+&#x8BF4;&#x660E;:&#x6C42;&#x8FD1;&#x4F3C;&#x7684;&#x7B2C;pth&#x4E2A;&#x767E;&#x5206;&#x4F4D;&#x6570;&#xFF0C;p&#x5FC5;&#x987B;&#x4ECB;&#x4E8E;0&#x548C;1&#x4E4B;&#x95F4;&#xFF0C;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x4E3A;double&#xFF0C;&#x4F46;&#x662F;col&#x5B57;&#x6BB5;&#x652F;&#x6301;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x3002;&#x53C2;&#x6570;B&#x63A7;&#x5236;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x7684;&#x8FD1;&#x4F3C;&#x7CBE;&#x5EA6;&#xFF0C;B&#x8D8A;&#x5927;&#xFF0C;&#x7ED3;&#x679C;&#x7684;&#x51C6;&#x786E;&#x5EA6;&#x8D8A;&#x9AD8;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;10,000&#x3002;&#x5F53;col&#x5B57;&#x6BB5;&#x4E2D;&#x7684;distinct&#x503C;&#x7684;&#x4E2A;&#x6570;&#x5C0F;&#x4E8E;B&#x65F6;&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;&#x51C6;&#x786E;&#x7684;&#x767E;&#x5206;&#x4F4D;&#x6570;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<h2 id="13-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox"><a name="13-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox" class="anchor-navigation-ex-anchor" href="#13-&#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;percentileapprox"><i class="fa fa-link" aria-hidden="true"></i></a>13. &#x8FD1;&#x4F3C;&#x4E2D;&#x4F4D;&#x6570;&#x51FD;&#x6570;:percentile_approx</h2>
+<pre><code>&#x8BED;&#x6CD5;: percentile_approx(DOUBLE col, array(p1 [, p2]&#x2026;) [, B])
+
+&#x8FD4;&#x56DE;&#x503C;: array&lt;double&gt;
+
+&#x8BF4;&#x660E;:&#x529F;&#x80FD;&#x548C;&#x4E0A;&#x8FF0;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E4B;&#x540E;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x591A;&#x4E2A;&#x767E;&#x5206;&#x4F4D;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x4E5F;&#x4E3A;array&lt;double&gt;&#xFF0C;&#x5176;&#x4E2D;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x767E;&#x5206;&#x4F4D;&#x6570;&#x3002;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<h2 id="14-&#x76F4;&#x65B9;&#x56FE;histogramnumeric"><a name="14-&#x76F4;&#x65B9;&#x56FE;histogramnumeric" class="anchor-navigation-ex-anchor" href="#14-&#x76F4;&#x65B9;&#x56FE;histogramnumeric"><i class="fa fa-link" aria-hidden="true"></i></a>14. &#x76F4;&#x65B9;&#x56FE;:histogram_numeric</h2>
+<pre><code>&#x8BED;&#x6CD5;: histogram_numeric(col, b)
+
+&#x8FD4;&#x56DE;&#x503C;: array&lt;struct {&#x2018;x&#x2019;,&#x2018;y&#x2019;}&gt;
+
+&#x8BF4;&#x660E;:&#x4EE5;b&#x4E3A;&#x57FA;&#x51C6;&#x8BA1;&#x7B97;col&#x7684;&#x76F4;&#x65B9;&#x56FE;&#x4FE1;&#x606F;&#x3002;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select histogram_numeric(100,5) from lxw_dual;
+
+[{&quot;x&quot;:100.0,&quot;y&quot;:1.0}]
+</code></pre>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="字符串函数.html" class="navigation navigation-prev " aria-label="Previous page: 字符串函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="复合复杂函数.html" class="navigation navigation-next " aria-label="Next page: 复合复杂函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"统计集合函数","level":"2.8.7","depth":2,"next":{"title":"复合复杂函数","level":"2.8.8","depth":2,"path":"工程工具/Hive函数大全/复合复杂函数.md","ref":"工程工具/Hive函数大全/复合复杂函数.md","articles":[]},"previous":{"title":"字符串函数","level":"2.8.6","depth":2,"path":"工程工具/Hive函数大全/字符串函数.md","ref":"工程工具/Hive函数大全/字符串函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"工程工具/Hive函数大全/统计集合函数.md","mtime":"2018-02-09T09:05:58.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-09T07:30:24.561Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

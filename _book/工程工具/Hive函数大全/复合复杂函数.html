@@ -1,0 +1,973 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>复合复杂函数 · Maye的个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xiachi">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../机器学习/xgboost参数和原理.html" />
+    
+    
+    <link rel="prev" href="统计集合函数.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://starmaye.github.io" target="_blank" class="custom-link">Maye的个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工程工具</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../git连接多个账号.html">
+            
+                <a href="../git连接多个账号.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    git链接多个账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../git学习代码.html">
+            
+                <a href="../git学习代码.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    git学习代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../spark学习笔记.html">
+            
+                <a href="../spark学习笔记.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    spark学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../jupyter安装目录工具.html">
+            
+                <a href="../jupyter安装目录工具.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    jupyter带目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../学习链接备用点.html">
+            
+                <a href="../学习链接备用点.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    学习链接备用点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../vim配置.html">
+            
+                <a href="../vim配置.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    vim配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Pandas学习笔记.html">
+            
+                <a href="../Pandas学习笔记.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    Pandas学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Hive函数大全.html">
+            
+                <a href="Hive函数大全.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Hive函数大全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="关系运算.html">
+            
+                <a href="关系运算.html">
+            
+                    
+                        <b>2.8.1.</b>
+                    
+                    关系运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="数学运算.html">
+            
+                <a href="数学运算.html">
+            
+                    
+                        <b>2.8.2.</b>
+                    
+                    数学运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.3" data-path="逻辑运算.html">
+            
+                <a href="逻辑运算.html">
+            
+                    
+                        <b>2.8.3.</b>
+                    
+                    逻辑运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.4" data-path="数值运算.html">
+            
+                <a href="数值运算.html">
+            
+                    
+                        <b>2.8.4.</b>
+                    
+                    数值运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.5" data-path="时间运算.html">
+            
+                <a href="时间运算.html">
+            
+                    
+                        <b>2.8.5.</b>
+                    
+                    时间运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.6" data-path="字符串函数.html">
+            
+                <a href="字符串函数.html">
+            
+                    
+                        <b>2.8.6.</b>
+                    
+                    字符串函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.7" data-path="统计集合函数.html">
+            
+                <a href="统计集合函数.html">
+            
+                    
+                        <b>2.8.7.</b>
+                    
+                    统计集合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8.8" data-path="复合复杂函数.html">
+            
+                <a href="复合复杂函数.html">
+            
+                    
+                        <b>2.8.8.</b>
+                    
+                    复合复杂函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">机器学习</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../机器学习/xgboost参数和原理.html">
+            
+                <a href="../../机器学习/xgboost参数和原理.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    xgboost参数和原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">自然语言处理</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                <a href="../../自然语言处理/topic_word_embedings模型和实现.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    topic_word_embedings论文解读和实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">代码示例</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                <a href="../../代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    matplotlib基本绘图示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../代码Demo/sklearn聚类/sklearn聚类.html">
+            
+                <a href="../../代码Demo/sklearn聚类/sklearn聚类.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    sklearn聚类demo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">gitbook的基本使用</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../gitbook_files/introduction.html">
+            
+                <a href="../../gitbook_files/introduction.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../gitbook_files/installation.html">
+            
+                <a href="../../gitbook_files/installation.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../gitbook_files/commands.html">
+            
+                <a href="../../gitbook_files/commands.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../gitbook_files/structure.html">
+            
+                <a href="../../gitbook_files/structure.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../gitbook_files/settings.html">
+            
+                <a href="../../gitbook_files/settings.html">
+            
+                    
+                        <b>6.5.</b>
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../gitbook_files/plugins.html">
+            
+                <a href="../../gitbook_files/plugins.html">
+            
+                    
+                        <b>6.6.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../gitbook_files/themes.html">
+            
+                <a href="../../gitbook_files/themes.html">
+            
+                    
+                        <b>6.7.</b>
+                    
+                    主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../gitbook_files/bookjson.md">
+            
+                <span>
+            
+                    
+                        <b>6.8.</b>
+                    
+                    bookjson
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >复合复杂函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;">&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;</a></li><ul><li><a href="#1-map&#x7C7B;&#x578B;&#x6784;&#x5EFA;-map">1. Map&#x7C7B;&#x578B;&#x6784;&#x5EFA;: map</a></li><li><a href="#2-struct&#x7C7B;&#x578B;&#x6784;&#x5EFA;-struct">2. Struct&#x7C7B;&#x578B;&#x6784;&#x5EFA;: struct</a></li><li><a href="#3-array&#x7C7B;&#x578B;&#x6784;&#x5EFA;-array">3. array&#x7C7B;&#x578B;&#x6784;&#x5EFA;: array</a></li></ul><li><a href="#&#x590D;&#x6742;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;">&#x590D;&#x6742;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;</a></li><ul><li><a href="#1-array&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-an">1. array&#x7C7B;&#x578B;&#x8BBF;&#x95EE;: A[n]</a></li><li><a href="#2-map&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-mkey">2. map&#x7C7B;&#x578B;&#x8BBF;&#x95EE;: M[key]</a></li><li><a href="#3-struct&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-sx">3. struct&#x7C7B;&#x578B;&#x8BBF;&#x95EE;: S.x</a></li></ul><li><a href="#&#x590D;&#x6742;&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;">&#x590D;&#x6742;&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;</a></li><ul><li><a href="#1---map&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizemap">1.   Map&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;: size(Map)</a></li><li><a href="#2---array&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizearray">2.   array&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;: size(Array)</a></li><li><a href="#3---&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;">3.   &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;</a></li></ul></ul></div><a href="#&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;"><a name="&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x5408;&#x7C7B;&#x578B;&#x6784;&#x5EFA;&#x64CD;&#x4F5C;</h1>
+<h2 id="1-map&#x7C7B;&#x578B;&#x6784;&#x5EFA;-map"><a name="1-map&#x7C7B;&#x578B;&#x6784;&#x5EFA;-map" class="anchor-navigation-ex-anchor" href="#1-map&#x7C7B;&#x578B;&#x6784;&#x5EFA;-map"><i class="fa fa-link" aria-hidden="true"></i></a>1. Map&#x7C7B;&#x578B;&#x6784;&#x5EFA;: map</h2>
+<pre><code>&#x8BED;&#x6CD5;: map (key1, value1, key2, value2,&#x2026;)
+
+&#x8BF4;&#x660E;&#xFF1A;&#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;key&#x548C;value&#x5BF9;&#x6784;&#x5EFA;map&#x7C7B;&#x578B;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; Create table lxw_test as select map(&apos;100&apos;,&apos;tom&apos;,&apos;200&apos;,&apos;mary&apos;)as t from lxw_dual;
+
+hive&gt; describe lxw_test;
+
+t       map&lt;string,string&gt;
+
+hive&gt; select t from lxw_test;
+
+{&quot;100&quot;:&quot;tom&quot;,&quot;200&quot;:&quot;mary&quot;}
+</code></pre>
+<h2 id="2-struct&#x7C7B;&#x578B;&#x6784;&#x5EFA;-struct"><a name="2-struct&#x7C7B;&#x578B;&#x6784;&#x5EFA;-struct" class="anchor-navigation-ex-anchor" href="#2-struct&#x7C7B;&#x578B;&#x6784;&#x5EFA;-struct"><i class="fa fa-link" aria-hidden="true"></i></a>2. Struct&#x7C7B;&#x578B;&#x6784;&#x5EFA;: struct</h2>
+<pre><code>&#x8BED;&#x6CD5;: struct(val1, val2, val3,&#x2026;)
+
+&#x8BF4;&#x660E;&#xFF1A;&#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;&#x53C2;&#x6570;&#x6784;&#x5EFA;&#x7ED3;&#x6784;&#x4F53;struct&#x7C7B;&#x578B;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; create table lxw_test as select struct(&apos;tom&apos;,&apos;mary&apos;,&apos;tim&apos;)as t from lxw_dual;
+
+hive&gt; describe lxw_test;
+
+t       struct&lt;col1:string,col2:string,col3:string&gt;
+
+hive&gt; select t from lxw_test;
+
+{&quot;col1&quot;:&quot;tom&quot;,&quot;col2&quot;:&quot;mary&quot;,&quot;col3&quot;:&quot;tim&quot;}
+</code></pre>
+<h2 id="3-array&#x7C7B;&#x578B;&#x6784;&#x5EFA;-array"><a name="3-array&#x7C7B;&#x578B;&#x6784;&#x5EFA;-array" class="anchor-navigation-ex-anchor" href="#3-array&#x7C7B;&#x578B;&#x6784;&#x5EFA;-array"><i class="fa fa-link" aria-hidden="true"></i></a>3. array&#x7C7B;&#x578B;&#x6784;&#x5EFA;: array</h2>
+<pre><code>&#x8BED;&#x6CD5;: array(val1, val2,&#x2026;)
+
+&#x8BF4;&#x660E;&#xFF1A;&#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;&#x53C2;&#x6570;&#x6784;&#x5EFA;&#x6570;&#x7EC4;array&#x7C7B;&#x578B;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; create table lxw_test as selectarray(&quot;tom&quot;,&quot;mary&quot;,&quot;tim&quot;) as t from lxw_dual;
+
+hive&gt; describe lxw_test;
+
+t       array&lt;string&gt;
+
+hive&gt; select t from lxw_test;
+
+[&quot;tom&quot;,&quot;mary&quot;,&quot;tim&quot;]
+</code></pre>
+<h1 id="&#x590D;&#x6742;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;"><a name="&#x590D;&#x6742;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x6742;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x6742;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;</h1>
+<h2 id="1-array&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-an"><a name="1-array&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-an" class="anchor-navigation-ex-anchor" href="#1-array&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-an"><i class="fa fa-link" aria-hidden="true"></i></a>1. array&#x7C7B;&#x578B;&#x8BBF;&#x95EE;: A[n]</h2>
+<pre><code>&#x8BED;&#x6CD5;: A[n]
+
+&#x64CD;&#x4F5C;&#x7C7B;&#x578B;: A&#x4E3A;array&#x7C7B;&#x578B;&#xFF0C;n&#x4E3A;int&#x7C7B;&#x578B;
+
+&#x8BF4;&#x660E;&#xFF1A;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;A&#x4E2D;&#x7684;&#x7B2C;n&#x4E2A;&#x53D8;&#x91CF;&#x503C;&#x3002;&#x6570;&#x7EC4;&#x7684;&#x8D77;&#x59CB;&#x4E0B;&#x6807;&#x4E3A;0&#x3002;&#x6BD4;&#x5982;&#xFF0C;A&#x662F;&#x4E2A;&#x503C;&#x4E3A;[&apos;foo&apos;, &apos;bar&apos;]&#x7684;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;A[0]&#x5C06;&#x8FD4;&#x56DE;&apos;foo&apos;,&#x800C;A[1]&#x5C06;&#x8FD4;&#x56DE;&apos;bar&apos;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; create table lxw_test as selectarray(&quot;tom&quot;,&quot;mary&quot;,&quot;tim&quot;) as t from lxw_dual;
+
+hive&gt; select t[0],t[1],t[2] from lxw_test;
+
+tom     mary   tim
+</code></pre>
+<h2 id="2-map&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-mkey"><a name="2-map&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-mkey" class="anchor-navigation-ex-anchor" href="#2-map&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-mkey"><i class="fa fa-link" aria-hidden="true"></i></a>2. map&#x7C7B;&#x578B;&#x8BBF;&#x95EE;: M[key]</h2>
+<pre><code>&#x8BED;&#x6CD5;: M[key]
+
+&#x64CD;&#x4F5C;&#x7C7B;&#x578B;: M&#x4E3A;map&#x7C7B;&#x578B;&#xFF0C;key&#x4E3A;map&#x4E2D;&#x7684;key&#x503C;
+
+&#x8BF4;&#x660E;&#xFF1A;&#x8FD4;&#x56DE;map&#x7C7B;&#x578B;M&#x4E2D;&#xFF0C;key&#x503C;&#x4E3A;&#x6307;&#x5B9A;&#x503C;&#x7684;value&#x503C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;M&#x662F;&#x503C;&#x4E3A;{&apos;f&apos; -&gt; &apos;foo&apos;, &apos;b&apos;-&gt; &apos;bar&apos;, &apos;all&apos; -&gt; &apos;foobar&apos;}&#x7684;map&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;M[&apos;all&apos;]&#x5C06;&#x4F1A;&#x8FD4;&#x56DE;&apos;foobar&apos;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; Create table lxw_test as selectmap(&apos;100&apos;,&apos;tom&apos;,&apos;200&apos;,&apos;mary&apos;) as t from lxw_dual;
+
+hive&gt; select t[&apos;200&apos;],t[&apos;100&apos;] from lxw_test;
+
+mary    tom
+</code></pre>
+<h2 id="3-struct&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-sx"><a name="3-struct&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-sx" class="anchor-navigation-ex-anchor" href="#3-struct&#x7C7B;&#x578B;&#x8BBF;&#x95EE;-sx"><i class="fa fa-link" aria-hidden="true"></i></a>3. struct&#x7C7B;&#x578B;&#x8BBF;&#x95EE;: S.x</h2>
+<pre><code>&#x8BED;&#x6CD5;: S.x
+
+&#x64CD;&#x4F5C;&#x7C7B;&#x578B;: S&#x4E3A;struct&#x7C7B;&#x578B;
+
+&#x8BF4;&#x660E;&#xFF1A;&#x8FD4;&#x56DE;&#x7ED3;&#x6784;&#x4F53;S&#x4E2D;&#x7684;x&#x5B57;&#x6BB5;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;&#x7ED3;&#x6784;&#x4F53;struct foobar {int foo, int bar}&#xFF0C;foobar.foo&#x8FD4;&#x56DE;&#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#x7684;foo&#x5B57;&#x6BB5;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; create table lxw_test as select struct(&apos;tom&apos;,&apos;mary&apos;,&apos;tim&apos;)as t from lxw_dual;
+
+hive&gt; describe lxw_test;
+
+t       struct&lt;col1:string,col2:string,col3:string&gt;
+
+hive&gt; select t.col1,t.col3 from lxw_test;
+
+tom     tim
+</code></pre>
+<h1 id="&#x590D;&#x6742;&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><a name="&#x590D;&#x6742;&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x6742;&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x6742;&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;</h1>
+<h2 id="1---map&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizemap"><a name="1---map&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizemap" class="anchor-navigation-ex-anchor" href="#1---map&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizemap"><i class="fa fa-link" aria-hidden="true"></i></a>1.   Map&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;: size(Map)</h2>
+<pre><code>&#x8BED;&#x6CD5;: size(Map&lt;K.V&gt;)
+
+&#x8FD4;&#x56DE;&#x503C;: int
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;map&#x7C7B;&#x578B;&#x7684;&#x957F;&#x5EA6;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select size(map(&apos;100&apos;,&apos;tom&apos;,&apos;101&apos;,&apos;mary&apos;)) from lxw_dual;
+
+2
+</code></pre>
+<h2 id="2---array&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizearray"><a name="2---array&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizearray" class="anchor-navigation-ex-anchor" href="#2---array&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;-sizearray"><i class="fa fa-link" aria-hidden="true"></i></a>2.   array&#x7C7B;&#x578B;&#x957F;&#x5EA6;&#x51FD;&#x6570;: size(Array)</h2>
+<pre><code>&#x8BED;&#x6CD5;: size(Array&lt;T&gt;)
+
+&#x8FD4;&#x56DE;&#x503C;: int
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;array&#x7C7B;&#x578B;&#x7684;&#x957F;&#x5EA6;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select size(array(&apos;100&apos;,&apos;101&apos;,&apos;102&apos;,&apos;103&apos;)) from lxw_dual;
+
+4
+</code></pre>
+<h2 id="3---&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;"><a name="3---&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#3---&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.   &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;</h2>
+<p>&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x51FD;&#x6570;: cast</p>
+<pre><code>&#x8BED;&#x6CD5;: cast(expr as &lt;type&gt;)
+
+&#x8FD4;&#x56DE;&#x503C;: Expected &quot;=&quot; to follow &quot;type&quot;
+
+&#x8BF4;&#x660E;:&#x8FD4;&#x56DE;array&#x7C7B;&#x578B;&#x7684;&#x957F;&#x5EA6;
+</code></pre><ul>
+<li>&#x4E3E;&#x4F8B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">
+hive&gt; select cast(1 as bigint) from lxw_dual;
+
+1
+</code></pre>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="统计集合函数.html" class="navigation navigation-prev " aria-label="Previous page: 统计集合函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../机器学习/xgboost参数和原理.html" class="navigation navigation-next " aria-label="Next page: xgboost参数和原理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"复合复杂函数","level":"2.8.8","depth":2,"next":{"title":"xgboost参数和原理","level":"3.1","depth":1,"path":"机器学习/xgboost参数和原理.md","ref":"机器学习/xgboost参数和原理.md","articles":[]},"previous":{"title":"统计集合函数","level":"2.8.7","depth":2,"path":"工程工具/Hive函数大全/统计集合函数.md","ref":"工程工具/Hive函数大全/统计集合函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","local-video@^1.0.1","anchor-navigation-ex@0.1.8","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-csv":{},"emphasize":{},"ace":{},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"alerts":{},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"douban":false,"linkedin":true,"messenger":false,"qq":false,"qzone":false,"weibo":true,"whatsapp":false,"all":["twitter","weibo","linkedin","qq","qzone"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"xiachi","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Maye的个人笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Maye的个人博客":"https://starmaye.github.io"}},"gitbook":"3.2.3","description":"主要记录个人的学习笔记"},"file":{"path":"工程工具/Hive函数大全/复合复杂函数.md","mtime":"2018-02-09T09:09:22.111Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-09T07:30:24.561Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

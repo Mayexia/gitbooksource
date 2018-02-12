@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=书本结构调整
+comment=添加hexo建立博客的内容
 cur_path=$PWD
 echo ${cur_path}
 git add .

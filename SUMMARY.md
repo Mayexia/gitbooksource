@@ -27,11 +27,6 @@
 * [学习链接备用点](工程工具/学习链接备用点.md)
 
 
-
-
-
-
-
 ## 机器学习
 * [xgboost参数和原理](机器学习/xgboost参数和原理.md)
 
@@ -41,6 +36,9 @@
 ## 代码示例
 * [matplotlib基本绘图示例](代码Demo/matplotlib绘图示例/matplotlib基本绘图示例.md)
 * [sklearn聚类demo](代码Demo/sklearn聚类/sklearn聚类.md)
+
+## 视频学习
+* [音乐推荐系统](视频学习/音乐推荐系统.md)
 
 ## gitbook的基本使用
 * [前言](gitbook_files/introduction.md)

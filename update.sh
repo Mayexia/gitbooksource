@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=添加hexo建立博客的内容
+comment=添加机器学习基础算法学习的链接
 cur_path=$PWD
 echo ${cur_path}
 git add .

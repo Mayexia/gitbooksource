@@ -30,6 +30,7 @@
 
 ## 机器学习
 * [xgboost参数和原理](机器学习/xgboost参数和原理.md)
+* [机器学习算法基础](机器学习/机器学习算法基础.md)
 
 ## 自然语言处理
 * [topic_word_embedings论文解读和实现](自然语言处理/topic_word_embedings模型和实现.md)

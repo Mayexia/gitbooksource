@@ -43,7 +43,8 @@
         "-sharing",
         "sharing-plus@^0.0.2",
         "graph@^0.1.0",
-        "chart@^0.2.0"
+        "chart@^0.2.0",
+        "katex"
     ],
 
     "pluginsConfig": {

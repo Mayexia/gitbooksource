@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-comment=添加机器学习基础算法学习的文章
+comment=添tensorflow学习官方例子链接
 cur_path=$PWD
 echo ${cur_path}
 git add .
